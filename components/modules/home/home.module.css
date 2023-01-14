@@ -1,0 +1,46 @@
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+
+  font-weight: 800;
+  letter-spacing: -0.3rem;
+}
+
+.title span {
+  position: relative;
+}
+
+.title .name::before,
+.title .lastName::before {
+  background: linear-gradient(90deg, #007cf0, #00dfd8);
+  content: 'Maxi';
+  position: absolute;
+  inset: 0;
+  background-clip: unset;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated 4s infinite;
+}
+
+.title :nth-child(3)::before {
+  background: linear-gradient(90deg, #7928ca, #ff0080);
+  content: 'Pezzotta.';
+  background-clip: unset;
+  -webkit-background-clip: text;
+  animation-delay: 33.33s;
+}
+
+@keyframes animated {
+  0%,
+  16.667%,
+  100% {
+    opacity: 1;
+  }
+
+  33.333%,
+  83.333% {
+    opacity: 0;
+  }
+}

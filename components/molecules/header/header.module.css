@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3rem;
+}
+
+.logo {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+}
+
+.invert {
+  filter: invert();
+}
