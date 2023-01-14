@@ -1,11 +1,10 @@
 .title {
   display: flex;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column;
   flex-wrap: wrap;
-
   font-weight: 800;
-  letter-spacing: -0.3rem;
+  letter-spacing: 0.25rem;
+  padding: 0.75rem 0;
 }
 
 .title span {
@@ -15,7 +14,7 @@
 .title .name::before,
 .title .lastName::before {
   background: linear-gradient(90deg, #007cf0, #00dfd8);
-  content: 'Maxi';
+  content: 'Maximiliano';
   position: absolute;
   inset: 0;
   background-clip: unset;
@@ -30,6 +29,17 @@
   background-clip: unset;
   -webkit-background-clip: text;
   animation-delay: 33.33s;
+}
+
+.description {
+  padding: 0.75rem 0;
+}
+
+.sections {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
 }
 
 @keyframes animated {
