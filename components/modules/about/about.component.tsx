@@ -23,16 +23,10 @@ export const About = () => {
             <li key={id}>{name}</li>
           ))}
         </ul>
-        <div className={styles.picture}>
-          <Image
-            src="/personal.png"
-            alt="Selfie"
-            fill
-            placeholder="blur"
-            blurDataURL="L%Oo-e%M_NI:l9M{xasorrflNFtR"
-          />
-        </div>
       </section>
+      <div className={styles.picture}>
+        <Image src="/personal.png" alt="Selfie" fill />
+      </div>
     </>
   )
 }
