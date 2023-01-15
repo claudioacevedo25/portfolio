@@ -13,14 +13,14 @@
 
 .title .name::before,
 .title .lastName::before {
+  position: absolute;
   background: linear-gradient(90deg, #007cf0, #00dfd8);
   content: 'Maximiliano';
-  position: absolute;
   inset: 0;
   background-clip: unset;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: animated 4s infinite;
+  animation: animated 5s infinite;
 }
 
 .title :nth-child(3)::before {
@@ -28,7 +28,7 @@
   content: 'Pezzotta.';
   background-clip: unset;
   -webkit-background-clip: text;
-  animation-delay: 33.33s;
+  animation-delay: 2s;
 }
 
 .description {
