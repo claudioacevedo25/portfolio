@@ -1,6 +1,4 @@
 import { styled } from '@mui/material/styles'
-import FormGroup from '@mui/material/FormGroup'
-import FormControlLabel from '@mui/material/FormControlLabel'
 import Switch from '@mui/material/Switch'
 
 type Props = {
@@ -55,5 +53,5 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }))
 
 export const CustomizedSwitches = ({ onClick }: Props) => (
-  <MaterialUISwitch sx={{ m: 1 }} onClick={onClick} defaultChecked />
+  <MaterialUISwitch sx={{ m: 1 }} onClick={onClick} />
 )

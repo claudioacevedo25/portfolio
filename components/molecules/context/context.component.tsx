@@ -8,11 +8,11 @@ type Props = {
 }
 
 export const ToggleColorMode = ({ children }: Props) => {
-  const [mode, setMode] = useState<'light' | 'dark'>('light')
+  const [mode, setMode] = useState<'light' | 'dark'>('dark')
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
+        setMode((prevMode) => (prevMode === 'dark' ? 'light' : 'dark'))
       },
     }),
     [],
