@@ -23,6 +23,12 @@ export const ToggleColorMode = ({ children }: Props) => {
       createTheme({
         palette: {
           mode,
+          ...(mode === 'dark' && {
+            background: {
+              default: '#0a192f',
+              paper: '#0a192f',
+            },
+          }),
         },
       }),
     [mode],

@@ -12,7 +12,7 @@ export const Home = () => {
 
   return (
     <>
-      <Typography variant="body1" component="h3">
+      <Typography variant="body1" component="h3" color="primary">
         Hi, my name is
       </Typography>
       <Typography variant={`${isDesktop ? 'h3' : 'h3'}`} className={styles.title} component="h1">
@@ -20,10 +20,13 @@ export const Home = () => {
         <span className={styles.name}>Maximiliano</span>
         <span className={styles.lastName}>Pezzotta.</span>
       </Typography>
-      <Typography variant={`${isDesktop ? 'h4' : 'h4'}`} component="h2">
+      <Typography variant={`${isDesktop ? 'h4' : 'h4'}`} component="h2" sx={{ opacity: '0.8' }}>
         I build digital solutions for the web.
       </Typography>
-      <Typography variant={`${isDesktop ? 'body1' : 'body1'}`} className={styles.description}>
+      <Typography
+        variant={`${isDesktop ? 'body1' : 'body1'}`}
+        className={styles.description}
+        sx={{ opacity: '0.7' }}>
         I’m a software engineer (specializing Frontend) passionate in building exceptional digital
         experiences. Currently, I’m focused on building accessible, human-centered products.
       </Typography>
