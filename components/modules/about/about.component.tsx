@@ -5,17 +5,23 @@ import Image from 'next/image'
 import styles from './about.module.css'
 
 export const About = () => {
-  const isDesktop = useMediaQuery('(min-width:600px)')
+  const isDesktop = useMediaQuery('(min-width:768px)')
 
   return (
     <>
       <section className={styles.container}>
         <div className={styles.content}>
-          <Typography variant="h5" component="h1" className={styles.title}>
+          <Typography
+            variant={`${isDesktop ? 'h3' : 'h5'}`}
+            component="h1"
+            className={styles.title}>
             About Me
           </Typography>
           {ABOUT_ME.map(({ id, content }) => (
-            <Typography variant="body1" className={styles.description} key={id}>
+            <Typography
+              variant={`${isDesktop ? 'subtitle1' : 'body1'}`}
+              className={styles.description}
+              key={id}>
               {content}
             </Typography>
           ))}

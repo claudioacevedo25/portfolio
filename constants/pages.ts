@@ -14,5 +14,10 @@ const PAGES = [
     href: 'hobbies',
     title: `Hobbies `,
   },
+  {
+    id: 4,
+    href: 'resume',
+    title: `Resume`,
+  },
 ]
 export { PAGES }
