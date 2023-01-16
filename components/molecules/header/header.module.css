@@ -13,3 +13,18 @@
 .invert {
   filter: invert();
 }
+
+@media (min-width: 788px) {
+  .container {
+    padding: 0 4rem;
+  }
+  .sections {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1080px) {
+  .container {
+    padding: 0 10rem;
+  }
+}

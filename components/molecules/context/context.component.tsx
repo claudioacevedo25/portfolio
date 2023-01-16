@@ -1,7 +1,14 @@
 import { useState, useMemo } from 'react'
+import { Inter } from '@next/font/google'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { ColorModeContext } from 'components/molecules/header/header.component'
+
+const inter = Inter({
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  fallback: ['Helvetica', 'Arial', 'sans-serif'],
+})
 
 type Props = {
   children: React.ReactNode
@@ -30,6 +37,7 @@ export const ToggleColorMode = ({ children }: Props) => {
             },
           }),
         },
+        typography: { fontFamily: inter.style.fontFamily },
       }),
     [mode],
   )
