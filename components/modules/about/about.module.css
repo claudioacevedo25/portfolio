@@ -1,7 +1,8 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 3rem 2rem;
+  padding: 0 2rem;
+  padding-bottom: 1rem;
   gap: 1rem;
 }
 
@@ -73,7 +74,7 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     gap: 4rem;
-    padding: 6rem;
+    padding: 0 6rem;
   }
 
   .skills li {
@@ -95,7 +96,7 @@
 
 @media (min-width: 1080px) {
   .container {
-    padding: 6rem 12rem;
+    padding: 0 12rem;
     margin: 0 auto;
   }
 }
