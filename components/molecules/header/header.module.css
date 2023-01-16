@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem;
 }
 
 .logo {
@@ -16,7 +17,7 @@
 
 @media (min-width: 788px) {
   .container {
-    padding: 0 4rem;
+    padding: 2rem 6rem;
   }
   .sections {
     flex-direction: row;
@@ -25,6 +26,6 @@
 
 @media (min-width: 1080px) {
   .container {
-    padding: 0 10rem;
+    padding: 2rem 12rem;
   }
 }

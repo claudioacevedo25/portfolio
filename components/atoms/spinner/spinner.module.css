@@ -1,0 +1,31 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #0a192f;
+}
+
+.image {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+}
+
+.image img {
+  filter: invert();
+  animation: animated 1.2s infinite;
+}
+
+@keyframes animated {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
