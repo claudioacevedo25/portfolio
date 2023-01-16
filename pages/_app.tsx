@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimation((prev) => !prev)
-    }, 2000)
+    }, 4000)
 
     return () => clearTimeout(timer)
   }, [])
