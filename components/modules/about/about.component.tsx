@@ -9,24 +9,26 @@ export const About = () => {
 
   return (
     <>
-      <Typography variant="h5" component="h1" className={styles.title}>
-        About Me
-      </Typography>
       <section className={styles.container}>
-        {ABOUT_ME.map(({ id, content }) => (
-          <Typography variant="body1" className={styles.description} key={id}>
-            {content}
+        <div className={styles.content}>
+          <Typography variant="h5" component="h1" className={styles.title}>
+            About Me
           </Typography>
-        ))}
-        <ul className={styles.skills}>
-          {SKILLS.map(({ id, name }) => (
-            <li key={id}>{name}</li>
+          {ABOUT_ME.map(({ id, content }) => (
+            <Typography variant="body1" className={styles.description} key={id}>
+              {content}
+            </Typography>
           ))}
-        </ul>
+          <ul className={styles.skills}>
+            {SKILLS.map(({ id, name }) => (
+              <li key={id}>{name}</li>
+            ))}
+          </ul>
+        </div>
+        <div className={styles.picture}>
+          <Image src="/personal.png" alt="Selfie" fill />
+        </div>
       </section>
-      <div className={styles.picture}>
-        <Image src="/personal.png" alt="Selfie" fill />
-      </div>
     </>
   )
 }

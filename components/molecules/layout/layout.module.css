@@ -3,5 +3,5 @@
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  padding-bottom: 2rem;
+  max-width: 1600px;
 }
