@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { Button, Typography } from '@mui/material'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useRouter } from 'next/router'
@@ -15,11 +16,15 @@ export const Home = () => {
       <Typography variant="body1" component="h3" color="primary">
         Hi, my name is
       </Typography>
-      <Typography variant={`${isDesktop ? 'h1' : 'h3'}`} className={styles.title} component="h1">
+      <motion.h1
+        className={styles.title}
+        initial={{ x: -100 }}
+        animate={{ x: 0 }}
+        transition={{ type: 'spring', stiffness: 100 }}>
         <span />
         <span className={styles.name}>Maximiliano</span>
         <span className={styles.lastName}>Pezzotta.</span>
-      </Typography>
+      </motion.h1>
       <Typography variant={`${isDesktop ? 'h2' : 'h4'}`} sx={{ opacity: '0.8' }}>
         I build digital solutions for the web.
       </Typography>
@@ -31,7 +36,11 @@ export const Home = () => {
         I’m a software engineer (specializing Frontend) passionate in building exceptional digital
         experiences. Currently, I’m focused on building accessible, human-centered products.
       </Typography>
-      <div className={styles.sections}>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className={styles.sections}>
         {PAGES.map(({ href, title, id }) => (
           <Button
             key={id}
@@ -41,7 +50,7 @@ export const Home = () => {
             <Typography>{title}</Typography>
           </Button>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }
