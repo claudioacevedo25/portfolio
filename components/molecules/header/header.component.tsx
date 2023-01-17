@@ -1,4 +1,5 @@
 import { createContext, useContext } from 'react'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useTheme } from '@mui/material/styles'
 
@@ -12,14 +13,24 @@ export const Header = () => {
   const colorMode = useContext(ColorModeContext)
   const { palette } = useTheme()
 
+  const motionProps = {
+    initial: { opacity: 0, scale: 0.5 },
+    animate: { opacity: 1, scale: 1 },
+    transition: { duration: 0.2 },
+  }
+
   return (
     <div className={styles.container}>
       <Link href="/">
-        <div className={`${styles.logo} ${palette.mode === 'dark' ? styles.invert : ''}`}>
+        <motion.div
+          className={`${styles.logo} ${palette.mode === 'dark' ? styles.invert : ''}`}
+          {...motionProps}>
           <Image src="/code.svg" alt="code" fill />
-        </div>
+        </motion.div>
       </Link>
-      <ThemeSwitch onClick={colorMode.toggleColorMode} />
+      <motion.div {...motionProps} transition={{ duration: 0.4 }}>
+        <ThemeSwitch onClick={colorMode.toggleColorMode} />
+      </motion.div>
     </div>
   )
 }
