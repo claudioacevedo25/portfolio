@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: #0a192f;
 }
 
@@ -11,4 +10,6 @@
   position: relative;
   width: 8rem;
   height: 8rem;
+  background-color: transparent;
+  border: none;
 }
