@@ -1,4 +1,5 @@
-import { Typography } from '@mui/material'
+import { motion } from 'framer-motion'
+import { duration, Typography } from '@mui/material'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { ABOUT_ME, SKILLS } from 'constants/content'
 import Image from 'next/image'
@@ -7,33 +8,39 @@ import styles from './about.module.css'
 export const About = () => {
   const isDesktop = useMediaQuery('(min-width:768px)')
 
+  const motionProps = {
+    initial: { opacity: 0, scale: 0.7 },
+    animate: { opacity: 0.8, scale: 1 },
+    transition: { duration: 0.4 },
+  }
+
   return (
     <>
       <section className={styles.container}>
         <div className={styles.content}>
-          <Typography
-            variant={`${isDesktop ? 'h3' : 'h5'}`}
-            component="h1"
-            className={styles.title}>
+          <motion.h1 className={styles.title} {...motionProps} animate={{ opacity: 1, scale: 1 }}>
             About Me
-          </Typography>
+          </motion.h1>
           {ABOUT_ME.map(({ id, content }) => (
-            <Typography
-              variant={`${isDesktop ? 'subtitle1' : 'body1'}`}
+            <motion.p
+              {...motionProps}
+              transition={{ duration: 0.4 + id }}
               className={styles.description}
               key={id}>
               {content}
-            </Typography>
+            </motion.p>
           ))}
           <ul className={styles.skills}>
             {SKILLS.map(({ id, name }) => (
-              <li key={id}>{name}</li>
+              <motion.li key={id} {...motionProps} transition={{ duration: 0.5 + id }}>
+                {name}
+              </motion.li>
             ))}
           </ul>
         </div>
-        <div className={styles.picture}>
+        <motion.div className={styles.picture} {...motionProps}>
           <Image src="/personal.png" alt="Selfie" fill />
-        </div>
+        </motion.div>
       </section>
     </>
   )
