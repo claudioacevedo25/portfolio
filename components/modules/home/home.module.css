@@ -23,7 +23,7 @@
 .title .name::before,
 .title .lastName::before {
   position: absolute;
-  background: linear-gradient(90deg, #007cf0, #00dfd8);
+  background: linear-gradient(90deg, #007cf0, #d9d62a);
   content: 'Maximiliano';
   inset: 0;
   background-clip: unset;
@@ -33,7 +33,7 @@
 }
 
 .title :nth-child(3)::before {
-  background: linear-gradient(90deg, #7928ca, #ff0080);
+  background: linear-gradient(90deg, #d9d62a, #ff0080);
   content: 'Pezzotta.';
   background-clip: unset;
   -webkit-background-clip: text;

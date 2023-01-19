@@ -28,7 +28,7 @@ export const About = () => (
       </ul>
     </div>
     <motion.div className={styles.picture} {...MOTION_PROPS}>
-      <Image src="/personal.png" alt="Selfie" fill />
+      <Image src="/profile-pic.png" alt="profile-pic" fill />
     </motion.div>
   </section>
 )

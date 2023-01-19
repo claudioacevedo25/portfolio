@@ -54,10 +54,10 @@
   background-color: transparent;
 }
 
-.picture img {
+/* .picture img {
   border-radius: 2rem;
-}
-
+} */
+/* 
 .picture::after {
   content: '';
   position: absolute;
@@ -69,7 +69,7 @@
   top: 1.25rem;
   left: 1.25rem;
   z-index: -1;
-}
+} */
 
 @media (min-width: 768px) {
   .container {
