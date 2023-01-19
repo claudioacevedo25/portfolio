@@ -44,4 +44,81 @@ const SKILLS = [
   },
 ]
 
-export { ABOUT_ME, SKILLS }
+const EXPERIENCE = {
+  title: `Experience`,
+  subtitle: `In this section you can see some work experiences in which I have been working recently.`,
+  companies: [
+    {
+      id: 0,
+      name: 'Bitlogic',
+    },
+    {
+      id: 1,
+      name: 'Splight',
+    },
+    {
+      id: 2,
+      name: 'Folcode',
+    },
+  ],
+  tasks: [
+    {
+      id: 0,
+      company: 'Bitlogic',
+      title: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the `,
+      actions: [
+        {
+          id: 0.1,
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+        },
+        {
+          id: 0.2,
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+        },
+        {
+          id: 0.3,
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+        },
+      ],
+    },
+    {
+      id: 1,
+      company: 'Splight',
+      title: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the `,
+      actions: [
+        {
+          id: 0.1,
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+        },
+        {
+          id: 0.2,
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+        },
+        {
+          id: 0.3,
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+        },
+      ],
+    },
+    {
+      id: 2,
+      company: 'Folcode',
+      title: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the `,
+      actions: [
+        {
+          id: 0.1,
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+        },
+        {
+          id: 0.2,
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+        },
+        {
+          id: 0.3,
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+        },
+      ],
+    },
+  ],
+}
+export { ABOUT_ME, SKILLS, EXPERIENCE }
