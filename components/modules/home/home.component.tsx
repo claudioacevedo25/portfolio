@@ -1,21 +1,12 @@
 import { motion } from 'framer-motion'
-import { Button, Typography } from '@mui/material'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import { useRouter } from 'next/router'
-import { PAGES } from 'constants/pages'
 import styles from './home.module.css'
 
 export const Home = () => {
-  const isDesktop = useMediaQuery('(min-width:768px)')
-  const router = useRouter()
-
   const motionProps = {
     initial: { opacity: 0, scale: 0.7 },
     animate: { opacity: 1, scale: 1 },
     transition: { duration: 0.4 },
   }
-
-  const navigateTo = (href: string) => router.push(href)
 
   return (
     <section className={styles.container}>
@@ -34,17 +25,6 @@ export const Home = () => {
         I’m a software engineer (specializing Frontend) passionate in building exceptional digital
         experiences. Currently, I’m focused on building accessible, human-centered products.
       </motion.p>
-      <motion.div {...motionProps} transition={{ duration: 0.8 }} className={styles.sections}>
-        {PAGES.map(({ href, title, id }) => (
-          <Button
-            key={id}
-            onClick={() => navigateTo(href)}
-            variant="outlined"
-            size={`${isDesktop ? 'large' : 'small'}`}>
-            <Typography>{title}</Typography>
-          </Button>
-        ))}
-      </motion.div>
     </section>
   )
 }
