@@ -1,11 +1,12 @@
+import { Button, Typography, useMediaQuery } from '@mui/material'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { Header } from '../header'
 import { ToggleColorMode } from '../context'
-import styles from './layout.module.css'
 import { PAGES } from 'constants/pages'
-import { Button, Typography, useMediaQuery } from '@mui/material'
-import { useRouter } from 'next/router'
+import { MOTION_PROPS } from 'constants/motion'
+import styles from './layout.module.css'
 
 type Props = {
   children: React.ReactNode
@@ -14,12 +15,6 @@ type Props = {
 export const Layout = ({ children }: Props) => {
   const isDesktop = useMediaQuery('(min-width:768px)')
   const router = useRouter()
-
-  const motionProps = {
-    initial: { opacity: 0, scale: 0.7 },
-    animate: { opacity: 1, scale: 1 },
-    transition: { duration: 0.4 },
-  }
 
   const navigateTo = (href: string) => router.push(href)
 
@@ -39,7 +34,7 @@ export const Layout = ({ children }: Props) => {
         <Header />
         <main className={styles.container}>
           {children}
-          <motion.div {...motionProps} transition={{ duration: 0.8 }} className={styles.sections}>
+          <motion.div {...MOTION_PROPS} transition={{ duration: 0.8 }} className={styles.sections}>
             {PAGES.map(({ href, title, id }) => {
               if (router.route === href) return null
               return (

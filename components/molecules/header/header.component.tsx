@@ -1,23 +1,22 @@
 import { createContext, useContext } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useTheme } from '@mui/material/styles'
-
+import { MOTION_PROPS } from 'constants/motion'
 import { ThemeSwitch } from 'components/atoms/switch'
 import styles from './header.module.css'
-import Link from 'next/link'
+
+const motionProps = {
+  ...MOTION_PROPS,
+  transition: { duration: 0.2 },
+}
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} })
 
 export const Header = () => {
   const colorMode = useContext(ColorModeContext)
   const { palette } = useTheme()
-
-  const motionProps = {
-    initial: { opacity: 0, scale: 0.7 },
-    animate: { opacity: 1, scale: 1 },
-    transition: { duration: 0.2 },
-  }
 
   return (
     <div className={styles.container}>
