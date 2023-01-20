@@ -34,7 +34,7 @@ export const About = () => (
         placeholder="blur"
         blurDataURL="LjL|u-xr.mIrg$Rkwct6IHfm9at5"
         sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
+              (max-width: 1080px) 50vw,
               33vw"
         fill
       />

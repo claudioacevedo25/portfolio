@@ -29,7 +29,7 @@ export const Header = () => {
             alt="code"
             fill
             sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
+              (max-width: 1080px) 50vw,
               33vw"
           />
         </motion.div>

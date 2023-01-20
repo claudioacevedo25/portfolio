@@ -60,7 +60,7 @@
   gap: 0.9rem;
 }
 
-@media (min-width: 788px) {
+@media (min-width: 768px) {
   .container {
     padding: 0 6rem;
   }
