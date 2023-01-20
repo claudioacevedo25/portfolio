@@ -24,7 +24,14 @@ export const Header = () => {
         <motion.div
           className={`${styles.logo} ${palette.mode === 'dark' ? styles.invert : ''}`}
           {...motionProps}>
-          <Image src="/code.svg" alt="code" fill />
+          <Image
+            src="/code.svg"
+            alt="code"
+            fill
+            sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+          />
         </motion.div>
       </Link>
       <motion.div {...motionProps} transition={{ duration: 0.4 }}>

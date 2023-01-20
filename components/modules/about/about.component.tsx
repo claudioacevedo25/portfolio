@@ -33,6 +33,9 @@ export const About = () => (
         alt="profile-pic"
         placeholder="blur"
         blurDataURL="LjL|u-xr.mIrg$Rkwct6IHfm9at5"
+        sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
         fill
       />
     </motion.div>
