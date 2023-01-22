@@ -16,6 +16,7 @@ body {
 }
 
 a {
+  color: var(--anchorColor);
   text-decoration: none;
 }
 
