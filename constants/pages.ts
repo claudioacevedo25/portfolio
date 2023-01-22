@@ -16,8 +16,8 @@ const PAGES = [
   },
   {
     id: 0.3,
-    href: '/hobbies',
-    title: `Hobbies `,
+    href: '/projects',
+    title: `Projects`,
   },
   {
     id: 0.4,
