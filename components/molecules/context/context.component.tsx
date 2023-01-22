@@ -32,17 +32,13 @@ export const ToggleColorMode = ({ children }: Props) => {
           mode,
           ...(mode === 'dark'
             ? {
-                background: {
-                  default: '#0a192f', // 62C290
-                  paper: '#0a192f',
-                },
                 primary: {
-                  main: '#82D47B',
+                  main: '#ff9f2d',
                 },
               }
             : {
                 primary: {
-                  main: '#3991F9',
+                  main: '#f98600',
                 },
               }),
         },

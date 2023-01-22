@@ -21,7 +21,7 @@ export const Layout = ({ children }: Props) => {
   return (
     <>
       <Head>
-        <title>Dev - Maxi Pezzotta</title>
+        <title>Maxi Pezzotta</title>
         <meta name="description" content="software developer" />
         <meta
           name="keywords"

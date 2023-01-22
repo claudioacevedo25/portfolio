@@ -1,10 +1,13 @@
+import { Typography } from '@mui/material'
 import { motion } from 'framer-motion'
 import { MOTION_PROPS } from 'constants/motion'
 import styles from './home.module.css'
 
 export const Home = () => (
   <section className={styles.container}>
-    <motion.p {...MOTION_PROPS}>Hi, my name is</motion.p>
+    <motion.p {...MOTION_PROPS}>
+      <Typography color="primary">Hi, my name is</Typography>
+    </motion.p>
     <motion.h1 className={styles.title} {...MOTION_PROPS} transition={{ duration: 0.6 }}>
       <span />
       <span className={styles.name}>Maximiliano</span>

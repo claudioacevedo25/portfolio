@@ -9,10 +9,11 @@
   position: relative;
   width: 3rem;
   height: 3rem;
+  filter: invert(43%) sepia(84%) saturate(1059%) hue-rotate(9deg) brightness(107%) contrast(103%);
 }
 
 .invert {
-  filter: invert();
+  filter: invert(64%) sepia(20%) saturate(1527%) hue-rotate(348deg) brightness(102%) contrast(104%);
 }
 
 @media (min-width: 768px) {
