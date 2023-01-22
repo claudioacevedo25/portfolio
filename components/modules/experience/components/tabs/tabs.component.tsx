@@ -58,9 +58,9 @@ export const ExperienceTabs = () => {
           <Tab key={id} label={name} {...generateId(id)} />
         ))}
       </Tabs>
-      {tasks.map(({ id, title, actions }) => (
-        <TabPanel value={value} index={id} key={id}>
-          <ContentPanel actions={actions} title={title} />
+      {tasks.map((task) => (
+        <TabPanel value={value} index={task.id} key={task.id}>
+          <ContentPanel {...task} />
         </TabPanel>
       ))}
     </div>

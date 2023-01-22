@@ -50,7 +50,7 @@ const EXPERIENCE = {
   companies: [
     {
       id: 0,
-      name: 'Bitlogic',
+      name: 'Folcode',
     },
     {
       id: 1,
@@ -58,64 +58,71 @@ const EXPERIENCE = {
     },
     {
       id: 2,
-      name: 'Folcode',
+      name: 'Bitlogic',
     },
   ],
   tasks: [
     {
       id: 0,
-      company: 'Bitlogic',
-      title: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the `,
+      company: 'Folcode',
+      url: 'https://folcode.com/',
+      title: ` is a software company. The headquarters in San Juan, Argentina. Some tasks here: `,
       actions: [
         {
           id: 0.1,
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+          description: `Component development and implementation of reusable UI library in BITCloud`,
         },
         {
           id: 0.2,
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+          description: `Implementing authentication and authorization with KeyCloak.`,
         },
         {
           id: 0.3,
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+          description: `Next js, React js, modular css projects with best practices implementing SOLID principles.`,
+        },
+        {
+          id: 0.4,
+          description: `Content creation and teaching in Folcademy's courses.`,
         },
       ],
     },
     {
       id: 1,
       company: 'Splight',
-      title: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the `,
+      url: 'https://www.splight-ai.com/',
+      title: ` is an artificial intelligence company striving to achieve sustainability through technological innovation. Some tasks here:`,
       actions: [
         {
           id: 0.1,
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+          description: `Platform development based on data obtained from artificial intelligence and machine learning.`,
         },
         {
           id: 0.2,
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+          description: `Development of a library of reusable UI components in NPM with React Js.`,
         },
         {
           id: 0.3,
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+          description: `Implementing authentication and authorization with Auth0.`,
         },
       ],
     },
     {
       id: 2,
-      company: 'Folcode',
-      title: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the `,
+      company: 'Bitlogic',
+      url: 'https://www.bitlogic.io/',
+      title: ` is a software company. The headquarters in Córdoba, Argentina. Some tasks here:`,
       actions: [
         {
           id: 0.1,
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+          description: `Development and implementation of a Q&A section applied to sports science. .`,
         },
         {
           id: 0.2,
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+          description: `Authentication and authorization with Auth0.`,
         },
         {
           id: 0.3,
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+          description: `General SEO improvements.`,
         },
       ],
     },

@@ -6,14 +6,19 @@
 
 .tabPanel {
   width: fit-content;
-  padding: 3rem 2rem 0;
+  padding: 1rem 0 0;
 }
 
-.container button {
-  padding: 2rem 1.5rem;
-}
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
+  }
+
+  .tabPanel {
+    padding: 3rem 2rem 0;
+  }
+
+  .container button {
+    padding: 2rem 1.5rem;
   }
 }

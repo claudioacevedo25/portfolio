@@ -4,12 +4,19 @@ import styles from './contentPanel.module.css'
 
 type Props = {
   title: string
+  company: string
+  url: string
   actions: { id: number; description: string }[]
 }
 
-export const ContentPanel = ({ title, actions }: Props) => (
+export const ContentPanel = ({ title, actions, company, url }: Props) => (
   <div className={styles.container}>
-    <motion.p className={title}>{title}</motion.p>
+    <motion.p className={styles.title}>
+      <a href={url} target="_blank">
+        {company}
+      </a>
+      {title}
+    </motion.p>
     <ul className={styles.actions}>
       {actions.map(({ description, id }) => (
         <motion.li
