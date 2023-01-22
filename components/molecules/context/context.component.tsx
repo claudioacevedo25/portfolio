@@ -30,12 +30,21 @@ export const ToggleColorMode = ({ children }: Props) => {
       createTheme({
         palette: {
           mode,
-          ...(mode === 'dark' && {
-            background: {
-              default: '#0a192f',
-              paper: '#0a192f',
-            },
-          }),
+          ...(mode === 'dark'
+            ? {
+                background: {
+                  default: '#0a192f', // 62C290
+                  paper: '#0a192f',
+                },
+                primary: {
+                  main: '#82D47B',
+                },
+              }
+            : {
+                primary: {
+                  main: '#3991F9',
+                },
+              }),
         },
         typography: { fontFamily: inter.style.fontFamily },
       }),
