@@ -15,10 +15,12 @@ export const Projects = () => (
     <motion.p className={styles.subtitle} {...MOTION_PROPS} transition={{ duration: 0.65 }}>
       {subtitle}
     </motion.p>
-    {projects.map((project) => (
-      <motion.div key={project.id} className={styles.card}>
-        <Card {...project} />
-      </motion.div>
-    ))}
+    <div className={styles.cardContainer}>
+      {projects.map((project) => (
+        <motion.div key={project.id} className={styles.card} {...MOTION_PROPS}>
+          <Card {...project} />
+        </motion.div>
+      ))}
+    </div>
   </section>
 )

@@ -13,11 +13,14 @@ type Props = {
 
 export const ContentPanel = ({ title, actions, company, url }: Props) => {
   const { palette } = useTheme()
-  const customStyles = { '--anchorColor': palette.primary.main } as CSSProperties
+  const customStyles = {
+    '--anchorColor': palette.primary.main,
+    '--listStyle': palette.primary.main,
+  } as CSSProperties
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={customStyles}>
       <motion.p className={styles.title}>
-        <a href={url} target="_blank" style={customStyles}>
+        <a href={url} target="_blank">
           {company}
         </a>
         {title}

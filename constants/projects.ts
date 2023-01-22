@@ -60,8 +60,8 @@ const PROJECTS = {
       id: 2,
       name: 'Maxi Pezzotta',
       urls: {
-        picture: '',
-        site: 'https://maximilianopezzotta.vercel.app',
+        picture: '/ownSite.webp',
+        site: '/',
         github: 'https://github.com/claudioacevedo25/portfolio',
       },
       description: 'My own web site.',
