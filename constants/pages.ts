@@ -12,7 +12,7 @@ const PAGES = [
   {
     id: 0.2,
     href: '/experience',
-    title: `Where I've Worked `,
+    title: `Experience`,
   },
   {
     id: 0.3,
@@ -21,7 +21,7 @@ const PAGES = [
   },
   {
     id: 0.4,
-    href: 'https://drive.google.com/file/d/1w-qym2-7d-iPCT7jBgCmxN-2WRFDXU4l/view?usp=share_link',
+    href: '/resume',
     title: `Resume`,
   },
 ]
