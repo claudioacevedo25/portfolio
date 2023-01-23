@@ -36,10 +36,8 @@ export const About = () => {
       </div>
       <motion.div className={styles.picture} {...MOTION_PROPS}>
         <Image
-          src="/profile-pic.png"
+          src="/profile.webp"
           alt="profile-pic"
-          placeholder="blur"
-          blurDataURL="LjL|u-xr.mIrg$Rkwct6IHfm9at5"
           sizes="(max-width: 768px) 100vw,
               (max-width: 1080px) 50vw,
               33vw"
