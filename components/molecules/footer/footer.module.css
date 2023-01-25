@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  filter: opacity(0.5);
+}
+
+.socialList {
+  display: flex;
+  gap: 2rem;
+}
+
+.socialList li {
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    position: fixed;
+    right: 2rem;
+    bottom: 30%;
+  }
+  .socialList {
+    flex-direction: column;
+  }
+}

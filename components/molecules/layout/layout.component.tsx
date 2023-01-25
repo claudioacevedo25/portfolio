@@ -1,11 +1,12 @@
 import { Button, Typography, useMediaQuery } from '@mui/material'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
+import { ToggleColorMode } from '../context'
 import { Header } from '../header'
+import { Footer } from '../footer'
 import { Resume } from 'components/modules/resume'
 import { PAGES } from 'constants/pages'
 import { MOTION_PROPS } from 'constants/motion'
-import { ToggleColorMode } from '../context'
 import styles from './layout.module.css'
 
 type Props = {
@@ -45,6 +46,7 @@ export const Layout = ({ children }: Props) => {
           })}
         </motion.div>
       </main>
+      <Footer />
     </ToggleColorMode>
   )
 }
