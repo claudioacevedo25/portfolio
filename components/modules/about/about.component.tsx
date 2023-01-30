@@ -6,6 +6,8 @@ import { ABOUT_ME, SKILLS } from 'constants/content'
 import { MOTION_PROPS } from 'constants/motion'
 import styles from './about.module.css'
 
+const { title, content } = ABOUT_ME
+
 export const About = () => {
   const { palette } = useTheme()
   const customStyles = {
@@ -15,9 +17,9 @@ export const About = () => {
     <section className={styles.container} style={customStyles}>
       <div className={styles.content}>
         <motion.h1 className={styles.title} {...MOTION_PROPS} animate={{ opacity: 1, scale: 1 }}>
-          About Me
+          {title}
         </motion.h1>
-        {ABOUT_ME.map(({ id, content }) => (
+        {content.map(({ id, content }) => (
           <motion.p
             {...MOTION_PROPS}
             transition={{ duration: 0.4 + id }}

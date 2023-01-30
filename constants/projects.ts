@@ -1,7 +1,7 @@
 const PROJECTS = {
   title: 'Projects',
   subtitle:
-    'In this section you can find some personal projects made for custom clients and myself.',
+    'Here, you will find a collection of my work. To give you a complete understanding of my capabilities, I have made both the live websites and the corresponding source code available on GitHub.',
   projects: [
     {
       id: 0,

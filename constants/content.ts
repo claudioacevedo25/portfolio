@@ -1,21 +1,30 @@
-const ABOUT_ME = [
-  {
-    id: 0.1,
-    content: `Hello! My name is Maximiliano and I enjoy thinking about solutions that live on the internet. My interest in web development started in 2018 when I decided to try learning how to create a website. That intrigued me a lot. Thanks to this, I learned a lot about HTML and CSS! Then came JavaScript... The rest is history.`,
-  },
-  {
-    id: 0.2,
-    content: `Fast-forward to today, and I had the privilege of working at some software companies, huge corporations with wonderful people. My main focus these days is creating accessible and inclusive products and digital experiences for a variety of customers.`,
-  },
-  {
-    id: 0.3,
-    content: `I have also participated in the creation of a course on Next Js, API rest, React js, Material UI, which users of the Folcademy platform can purchase. Also, I like to participate in skills mentoring whenever I can.`,
-  },
-  {
-    id: 0.4,
-    content: ` Here are a few technologies I’ve been working with recently:`,
-  },
-]
+const HOME = {
+  greeting: `Hi, my name is`,
+  title: `Building beautiful experiences for the web.`,
+  subtitle: `As a frontend-focused software engineer, I am dedicated to bringing innovative and high-performing solutions to the digital landscape. Whether it's a complex web application or a simple landing page, I bring expertise, attention to detail, and a passion for crafting exceptional digital products.`,
+}
+
+const ABOUT_ME = {
+  title: `About me`,
+  content: [
+    {
+      id: 0.1,
+      content: `Hello! I'm Maximiliano, a software developer with a passion for creating innovative solutions for the internet. My journey in software development began in 2018, when I discovered my love for crafting websites. Since then, I have honed my skills in HTML, CSS, and JavaScript, and have had the opportunity to work with some of the biggest software companies and corporations, where I have contributed to the creation of accessible and inclusive digital products.`,
+    },
+    {
+      id: 0.2,
+      content: `I continuously improve my skills and stay current with latest technologies to create user-centered digital solutions that are high-quality, reliable and meet client needs. I aim to create impactful and functional digital experiences.`,
+    },
+    {
+      id: 0.3,
+      content: `In addition to my professional experience, I am also a mentor and teacher, having participated in the creation of a comprehensive course on Next.js, API Rest, React.js, and Material UI. I am always seeking opportunities to share my knowledge and help others grow in their careers.`,
+    },
+    {
+      id: 0.4,
+      content: ` Here are a few technologies I’ve been working with recently:`,
+    },
+  ],
+}
 
 const SKILLS = [
   {
@@ -46,7 +55,7 @@ const SKILLS = [
 
 const EXPERIENCE = {
   title: `Experience`,
-  subtitle: `In this section you can see some work experiences in which I have been working recently.`,
+  subtitle: `Discover my recent professional journey in this section where I showcase my work experiences and achievements.`,
   companies: [
     {
       id: 0,
@@ -128,4 +137,4 @@ const EXPERIENCE = {
     },
   ],
 }
-export { ABOUT_ME, SKILLS, EXPERIENCE }
+export { HOME, ABOUT_ME, SKILLS, EXPERIENCE }
