@@ -21,7 +21,11 @@ export const Footer = () => {
       <ul className={styles.socialList}>
         {SOCIAL_NETWORK.map(({ id, icon: Icon, href, title }) => (
           <motion.li key={id}>
-            <a href={href} target="_blank" rel="noopener noreferrer">
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Read more in ${href}`}>
               <Icon />
             </a>
           </motion.li>

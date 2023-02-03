@@ -1,6 +1,7 @@
 import { Button, Typography, useMediaQuery } from '@mui/material'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 import { ToggleColorMode } from '../context'
 import { Header } from '../header'
 import { Footer } from '../footer'
@@ -28,6 +29,9 @@ export const Layout = ({ children }: Props) => {
 
   return (
     <ToggleColorMode>
+      <Head>
+        <title>{'Maxi Pezzotta'}</title>
+      </Head>
       <Header />
       <main className={styles.container}>
         {children}
