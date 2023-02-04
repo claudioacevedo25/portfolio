@@ -7,5 +7,11 @@
 
   "home.greeting": "Hola, mi nombre es",
   "home.title": "Construyendo experiencias atractivas para la web.",
-  "home.subtitle": "Como ingeniero de software con enfoque en el frontend, me dedico a aportar soluciones innovadoras y de alto rendimiento al entorno digital. Sea cual sea el proyecto, ya sea una aplicación web compleja o una landing page, aporto mi experiencia, atención al detalle y mi pasión por crear productos digitales sobresalientes."
+  "home.subtitle": "Como ingeniero de software con enfoque en el frontend, me dedico a aportar soluciones innovadoras y de alto rendimiento al entorno digital. Sea cual sea el proyecto, ya sea una aplicación web compleja o una landing page, aporto mi experiencia, atención al detalle y mi pasión por crear productos digitales sobresalientes.",
+
+  "about.title": "Sobre mi",
+  "about.description.first": "Hola! Soy Maximiliano, desarrollador de software con pasión por crear soluciones innovadoras para internet. Mi camino en el desarrollo de software comenzó en 2018, cuando incursioné en la creación de sitios web. Desde entonces, he perfeccionado mis habilidades en HTML, CSS y JavaScript, y he tenido la oportunidad de trabajar con algunas de las compañías de software y corporaciones más grandes, donde he contribuido a la creación de productos digitales accesibles e inclusivos.",
+  "about.description.second": "Continúo mejorando mis habilidades y manteniéndome al día con las últimas tecnologías para crear soluciones digitales centradas en el usuario que sean de alta calidad, confiables y cumplan con las necesidades del cliente. Mi objetivo es crear experiencias digitales impactantes y funcionales.",
+  "about.description.third": "Además de mi experiencia profesional, también soy mentor y profesor, habiendo participado en la creación de un curso integral sobre Next.js, API Rest, React.js y Material UI. Siempre estoy buscando oportunidades para compartir mis conocimientos y ayudar a otros a crecer en sus carreras.",
+  "about.description.fourth": "Aquí hay algunas tecnologías con las que he estado trabajando recientemente:"
 }

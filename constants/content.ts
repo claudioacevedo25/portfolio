@@ -1,27 +1,22 @@
-const HOME = {
-  greeting: `Hi, my name is`,
-  title: `Building beautiful experiences for the web.`,
-  subtitle: `As a frontend-focused software engineer, I am dedicated to bringing innovative and high-performing solutions to the digital landscape. Whether it's a complex web application or a simple landing page, I bring expertise, attention to detail, and a passion for crafting exceptional digital products.`,
-}
+import { messages } from 'components/modules/about/about.messages'
 
 const ABOUT_ME = {
-  title: `About me`,
   content: [
     {
       id: 0.1,
-      content: `Hello! I'm Maximiliano, a software developer with a passion for creating innovative solutions for the internet. My journey in software development began in 2018, when I discovered my love for crafting websites. Since then, I have honed my skills in HTML, CSS, and JavaScript, and have had the opportunity to work with some of the biggest software companies and corporations, where I have contributed to the creation of accessible and inclusive digital products.`,
+      content: messages.description.first,
     },
     {
       id: 0.2,
-      content: `I continuously improve my skills and stay current with latest technologies to create user-centered digital solutions that are high-quality, reliable and meet client needs. I aim to create impactful and functional digital experiences.`,
+      content: messages.description.second,
     },
     {
       id: 0.3,
-      content: `In addition to my professional experience, I am also a mentor and teacher, having participated in the creation of a comprehensive course on Next.js, API Rest, React.js, and Material UI. I am always seeking opportunities to share my knowledge and help others grow in their careers.`,
+      content: messages.description.third,
     },
     {
       id: 0.4,
-      content: ` Here are a few technologies I’ve been working with recently:`,
+      content: messages.description.fourth,
     },
   ],
 }
@@ -137,4 +132,4 @@ const EXPERIENCE = {
     },
   ],
 }
-export { HOME, ABOUT_ME, SKILLS, EXPERIENCE }
+export { ABOUT_ME, SKILLS, EXPERIENCE }
