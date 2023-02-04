@@ -1,8 +1,11 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, createContext, useContext } from 'react'
 import { Inter } from '@next/font/google'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
-import { ColorModeContext } from 'components/molecules/header/header.component'
+import { IntlProvider } from 'react-intl'
+import messages from 'translations'
+import { Language } from 'components/atoms/selectLang/selectLang.component'
+import { ContextProps } from './context.module'
 
 const inter = Inter({
   weight: ['400', '500', '600', '700'],
@@ -14,23 +17,35 @@ type Props = {
   children: React.ReactNode
 }
 
-export const ToggleColorMode = ({ children }: Props) => {
-  const [mode, setMode] = useState<'light' | 'dark'>('dark')
-  const colorMode = useMemo(
-    () => ({
-      toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'dark' ? 'light' : 'dark'))
-      },
-    }),
-    [],
-  )
+const defaultValues: ContextProps = {
+  toggleColorMode: () => {},
+  toggleLanguage: () => {},
+  language: 'en' as Language['value'],
+  mode: 'dark',
+}
+
+const AppContext = createContext(defaultValues)
+
+export const Context = ({ children }: Props) => {
+  const [appState, setAppState] = useState<ContextProps>(defaultValues)
+
+  const toggleLanguage = (language: ContextProps['language']) => {
+    setAppState((prevState) => ({ ...prevState, language }))
+  }
+
+  const toggleColorMode = () => {
+    setAppState((prevState) => ({
+      ...prevState,
+      mode: prevState.mode === 'dark' ? 'light' : 'dark',
+    }))
+  }
 
   const theme = useMemo(
     () =>
       createTheme({
         palette: {
-          mode,
-          ...(mode === 'dark'
+          mode: appState.mode,
+          ...(appState.mode === 'dark'
             ? {
                 primary: {
                   main: '#ff9f2d',
@@ -44,15 +59,23 @@ export const ToggleColorMode = ({ children }: Props) => {
         },
         typography: { fontFamily: inter.style.fontFamily },
       }),
-    [mode],
+    [appState.mode],
   )
 
+  const contextValue = useMemo(() => ({ ...appState, toggleLanguage, toggleColorMode }), [appState])
+
   return (
-    <ColorModeContext.Provider value={colorMode}>
+    <AppContext.Provider value={contextValue}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {children}
+        <IntlProvider locale={contextValue.language} messages={messages[contextValue.language]}>
+          {children}
+        </IntlProvider>
       </ThemeProvider>
-    </ColorModeContext.Provider>
+    </AppContext.Provider>
   )
+}
+
+export function useAppContext() {
+  return useContext(AppContext)
 }

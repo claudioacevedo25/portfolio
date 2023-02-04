@@ -4,9 +4,10 @@ import { useRouter } from 'next/router'
 import { Analytics } from '@vercel/analytics/react'
 import { Layout } from 'components/molecules/layout'
 import { Spinner } from 'components/atoms/spinner'
+import { Context } from 'components/molecules/context'
 import 'styles/globals.css'
 
-const DELAY = 4000
+const DELAY = 3000
 
 export default function App({ Component, pageProps }: AppProps) {
   const [animation, setAnimation] = useState(true)
@@ -23,9 +24,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
   if (animation && !isResumePage) return <Spinner />
   return (
-    <Layout>
-      <Component {...pageProps} />
-      <Analytics />
-    </Layout>
+    <Context>
+      <Layout>
+        <Component {...pageProps} />
+        <Analytics />
+      </Layout>
+    </Context>
   )
 }

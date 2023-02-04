@@ -1,0 +1,11 @@
+{
+  "pages.home": "Home",
+  "pages.aboutMe": "Sobre mi",
+  "pages.experience": "Experiencia",
+  "pages.projects": "Proyectos",
+  "pages.resume": "Curriculum",
+
+  "home.greeting": "Hola, mi nombre es",
+  "home.title": "Construyendo experiencias atractivas para la web.",
+  "home.subtitle": "Como ingeniero de software con enfoque en el frontend, me dedico a aportar soluciones innovadoras y de alto rendimiento al entorno digital. Sea cual sea el proyecto, ya sea una aplicación web compleja o una landing page, aporto mi experiencia, atención al detalle y mi pasión por crear productos digitales sobresalientes."
+}

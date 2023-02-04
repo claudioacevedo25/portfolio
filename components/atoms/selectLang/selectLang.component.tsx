@@ -2,24 +2,28 @@ import { Typography } from '@mui/material'
 import React from 'react'
 import styles from './selectLang.module.css'
 
-export type Language = { id: number; language: 'es' | 'en' }
+export const LANGUAGES: Language[] = [
+  { id: 1, value: 'en' },
+  { id: 2, value: 'es' },
+]
+
+export type Language = { id: number; value: 'es' | 'en' }
 type Props = {
-  languages: Language[]
-  onClick: (language: Language['language']) => void
-  selectedLang: Language
+  onClick: (value: Language['value']) => void
+  selectedLang: Language['value']
 }
 
-export const SelectLang = ({ languages, onClick, selectedLang }: Props) => {
+export const SelectLang = ({ onClick, selectedLang }: Props) => {
   return (
     <div className={styles.container}>
-      {languages.map(({ id, language }) => (
-        <button key={id} className={styles.langButton} onClick={() => onClick(language)}>
+      {LANGUAGES.map(({ id, value }) => (
+        <button key={id} className={styles.langButton} onClick={() => onClick(value)}>
           <Typography
             variant="button"
             className={`${styles.addPiped} ${
-              selectedLang.id === id ? styles.langButton__active : ''
+              selectedLang === value ? styles.langButton__active : ''
             }`}>
-            {language}
+            {value}
           </Typography>
         </button>
       ))}

@@ -1,0 +1,11 @@
+{
+  "pages.home": "Home",
+  "pages.aboutMe": "About me",
+  "pages.experience": "Experience",
+  "pages.projects": "Projects",
+  "pages.resume": "Resume",
+
+  "home.greeting": "Hi, my name is",
+  "home.title": "Building beautiful experiences for the web.",
+  "home.subtitle": "As a frontend-focused software engineer, I am dedicated to bringing innovative and high-performing solutions to the digital landscape. Whether it's a complex web application or a simple landing page, I bring expertise, attention to detail, and a passion for crafting exceptional digital products."
+}

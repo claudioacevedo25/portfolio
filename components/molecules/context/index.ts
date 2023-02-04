@@ -1,1 +1,1 @@
-export { ToggleColorMode } from './context.component'
+export { Context } from './context.component'

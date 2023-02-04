@@ -2,6 +2,7 @@ import { Button, Typography, useMediaQuery } from '@mui/material'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import { useIntl } from 'react-intl'
 import { ToggleColorMode } from '../context'
 import { Header } from '../header'
 import { Footer } from '../footer'
@@ -17,6 +18,7 @@ type Props = {
 export const Layout = ({ children }: Props) => {
   const isDesktop = useMediaQuery('(min-width:768px)')
   const router = useRouter()
+  const intl = useIntl()
 
   const isResumePage = router.route === '/resume'
 
@@ -28,7 +30,7 @@ export const Layout = ({ children }: Props) => {
   if (isResumePage) return <Resume />
 
   return (
-    <ToggleColorMode>
+    <>
       <Head>
         <title>{'Maxi Pezzotta'}</title>
       </Head>
@@ -44,13 +46,13 @@ export const Layout = ({ children }: Props) => {
                 onClick={() => navigateTo(href)}
                 variant="outlined"
                 size={`${isDesktop ? 'large' : 'small'}`}>
-                <Typography>{title}</Typography>
+                <Typography>{intl.formatMessage(title)}</Typography>
               </Button>
             )
           })}
         </motion.div>
       </main>
       <Footer />
-    </ToggleColorMode>
+    </>
   )
 }

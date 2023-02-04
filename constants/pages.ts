@@ -2,27 +2,42 @@ const PAGES = [
   {
     id: 0.0,
     href: '/',
-    title: 'Home',
+    title: {
+      id: 'pages.home',
+      defaultMessage: 'Home',
+    },
   },
   {
     id: 0.1,
     href: '/about',
-    title: 'About me',
+    title: {
+      id: 'pages.aboutMe',
+      defaultMessage: 'About Me',
+    },
   },
   {
     id: 0.2,
     href: '/experience',
-    title: `Experience`,
+    title: {
+      id: 'pages.experience',
+      defaultMessage: 'Experience',
+    },
   },
   {
     id: 0.3,
     href: '/projects',
-    title: `Projects`,
+    title: {
+      id: 'pages.projects',
+      defaultMessage: 'Projects',
+    },
   },
   {
     id: 0.4,
     href: '/resume',
-    title: `Resume`,
+    title: {
+      id: 'pages.resume',
+      defaultMessage: 'Resume',
+    },
   },
 ]
 export { PAGES }

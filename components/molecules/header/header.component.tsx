@@ -1,4 +1,3 @@
-import { createContext, useContext } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,22 +6,15 @@ import { MOTION_PROPS } from 'constants/motion'
 import { ThemeSwitch } from 'components/atoms/switch'
 import styles from './header.module.css'
 import { SelectLang } from 'components/atoms/selectLang'
-import { Language } from 'components/atoms/selectLang/selectLang.component'
+import { useAppContext } from '../context/context.component'
 
 const motionProps = {
   ...MOTION_PROPS,
   transition: { duration: 0.2 },
 }
 
-const LANGUAGES: Language[] = [
-  { id: 1, language: 'en' },
-  { id: 2, language: 'es' },
-]
-
-export const ColorModeContext = createContext({ toggleColorMode: () => {} })
-
 export const Header = () => {
-  const colorMode = useContext(ColorModeContext)
+  const { toggleColorMode, toggleLanguage, language } = useAppContext()
   const { palette } = useTheme()
 
   return (
@@ -42,12 +34,8 @@ export const Header = () => {
         </motion.div>
       </Link>
       <motion.div {...motionProps} transition={{ duration: 0.4 }} className={styles.selectors}>
-        <SelectLang
-          languages={LANGUAGES}
-          onClick={() => {}}
-          selectedLang={{ id: 1, language: 'es' }}
-        />
-        <ThemeSwitch onClick={colorMode.toggleColorMode} />
+        <SelectLang onClick={toggleLanguage} selectedLang={language} />
+        <ThemeSwitch onClick={toggleColorMode} />
       </motion.div>
     </div>
   )
