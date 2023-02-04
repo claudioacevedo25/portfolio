@@ -28,6 +28,9 @@
   .sections {
     flex-direction: row;
   }
+  .selectors {
+    gap: 1rem;
+  }
 }
 
 @media (min-width: 1080px) {

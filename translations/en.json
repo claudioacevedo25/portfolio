@@ -13,5 +13,23 @@
   "about.description.first": "Hello! I'm Maximiliano, a software developer with a passion for creating innovative solutions for the internet. My journey in software development began in 2018, when I discovered my love for crafting websites. Since then, I have honed my skills in HTML, CSS, and JavaScript, and have had the opportunity to work with some of the biggest software companies and corporations, where I have contributed to the creation of accessible and inclusive digital products.",
   "about.description.second": "I continuously improve my skills and stay current with latest technologies to create user-centered digital solutions that are high-quality, reliable and meet client needs. I aim to create impactful and functional digital experiences.",
   "about.description.third": "In addition to my professional experience, I am also a mentor and teacher, having participated in the creation of a comprehensive course on Next.js, API Rest, React.js, and Material UI. I am always seeking opportunities to share my knowledge and help others grow in their careers.",
-  "about.description.fourth": " Here are a few technologies I’ve been working with recently:"
+  "about.description.fourth": " Here are a few technologies I’ve been working with recently:",
+
+  "experience.title": "Experience",
+  "experience.subtitle": "Discover my recent professional journey in this section where I showcase my work experiences and achievements.",
+  "experience.tasks.folcode.title": " is a software company. The headquarters is in San Juan, Argentina. Some tasks here:",
+  "experience.tasks.folcode.one": "Component development and implementation of reusable UI library in BITCloud.",
+  "experience.tasks.folcode.two": "Implementing authentication and authorization with KeyCloak.",
+  "experience.tasks.folcode.tree": "Next js, React js, modular css projects with best practices implementing SOLID principles.",
+  "experience.tasks.folcode.four": "Content creation and teaching in Folcademy's courses.",
+  "experience.tasks.splight.title": " is an artificial intelligence company striving to achieve sustainability through technological innovation. Some tasks here:",
+  "experience.tasks.splight.one": "Platform development based on data obtained from artificial intelligence and machine learning.",
+  "experience.tasks.splight.two": "Development of a library of reusable UI components in NPM with React Js.",
+  "experience.tasks.splight.tree": "Implementing authentication and authorization with Auth0.",
+  "experience.tasks.splight.four": "Implementing web sockets to display statistical graphics consuming data from different sensors.",
+  "experience.tasks.bitlogic.title": " is a software company. The headquarters is in Córdoba, Argentina. Some tasks here:",
+  "experience.tasks.bitlogic.one": "Development and implementation of a Q&A section applied to sports science.",
+  "experience.tasks.bitlogic.two": "Authentication and authorization with Auth0.",
+  "experience.tasks.bitlogic.tree": "General SEO improvements.",
+  "experience.tasks.bitlogic.four": "Implementing testing with TDD and BDD."
 }

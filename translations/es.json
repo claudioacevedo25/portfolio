@@ -13,5 +13,23 @@
   "about.description.first": "Hola! Soy Maximiliano, desarrollador de software con pasión por crear soluciones innovadoras para internet. Mi camino en el desarrollo de software comenzó en 2018, cuando incursioné en la creación de sitios web. Desde entonces, he perfeccionado mis habilidades en HTML, CSS y JavaScript, y he tenido la oportunidad de trabajar con algunas de las compañías de software y corporaciones más grandes, donde he contribuido a la creación de productos digitales accesibles e inclusivos.",
   "about.description.second": "Continúo mejorando mis habilidades y manteniéndome al día con las últimas tecnologías para crear soluciones digitales centradas en el usuario que sean de alta calidad, confiables y cumplan con las necesidades del cliente. Mi objetivo es crear experiencias digitales impactantes y funcionales.",
   "about.description.third": "Además de mi experiencia profesional, también soy mentor y profesor, habiendo participado en la creación de un curso integral sobre Next.js, API Rest, React.js y Material UI. Siempre estoy buscando oportunidades para compartir mis conocimientos y ayudar a otros a crecer en sus carreras.",
-  "about.description.fourth": "Aquí hay algunas tecnologías con las que he estado trabajando recientemente:"
+  "about.description.fourth": "Aquí hay algunas tecnologías con las que he estado trabajando recientemente:",
+
+  "experience.title": "Experiencia",
+  "experience.subtitle": "Descubre mi reciente viaje profesional en esta sección donde muestro mis experiencias laborales y logros.",
+  "experience.tasks.folcode.title": " es una empresa de software. La sede principal está en San Juan, Argentina. Aquí algunas tareas:",
+  "experience.tasks.folcode.one": "Desarrollo de componentes e implementación de una biblioteca UI reutilizable en BITCloud.",
+  "experience.tasks.folcode.two": "Implementación de autenticación y autorización con KeyCloak.",
+  "experience.tasks.folcode.tree": "Proyectos de Next js, React js y css modulares con prácticas recomendadas aplicando principios SOLID.",
+  "experience.tasks.folcode.four": "Creación de contenido y rol de profesor en los cursos dictados por Folcademy.",
+  "experience.tasks.splight.title": " es una empresa de inteligencia artificial que busca lograr la sostenibilidad a través de la innovación tecnológica. Algunas tareas aquí:",
+  "experience.tasks.splight.one": "Desarrollo de plataforma basado en datos obtenidos de inteligencia artificial y machine learning.",
+  "experience.tasks.splight.two": "Desarrollo de una biblioteca de componentes UI reutilizables en NPM con React Js.",
+  "experience.tasks.splight.tree": "Implementación de autenticación y autorización con Auth0.",
+  "experience.tasks.splight.four": "Implementación de web sockets para mostrar gráficos estadísticos consumiendo datos de diferentes sensores.",
+  "experience.tasks.bitlogic.title": " es una empresa de software. La sede se encuentra en Córdoba, Argentina. Principales tareas aquí:",
+  "experience.tasks.bitlogic.one": "Desarrollo e implementación de una sección de preguntas y respuestas aplicadas a la ciencia del deporte.",
+  "experience.tasks.bitlogic.two": "Autenticación y autorización con Auth0.",
+  "experience.tasks.bitlogic.tree": "Mejoras generales de SEO.",
+  "experience.tasks.bitlogic.four": "Implementación de testeo con TDD and BDD."
 }

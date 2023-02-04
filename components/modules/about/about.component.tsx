@@ -5,10 +5,9 @@ import { useIntl } from 'react-intl'
 import { useTheme } from '@mui/material'
 import { ABOUT_ME, SKILLS } from 'constants/content'
 import { MOTION_PROPS } from 'constants/motion'
-import { messages } from './about.messages'
 import styles from './about.module.css'
 
-const { content } = ABOUT_ME
+const { title, content } = ABOUT_ME
 
 export const About = () => {
   const { palette } = useTheme()
@@ -20,7 +19,7 @@ export const About = () => {
     <section className={styles.container} style={customStyles}>
       <div className={styles.content}>
         <motion.h1 className={styles.title} {...MOTION_PROPS} animate={{ opacity: 1, scale: 1 }}>
-          {intl.formatMessage(messages.title)}
+          {intl.formatMessage(title)}
         </motion.h1>
         {content.map(({ id, content }) => (
           <motion.p

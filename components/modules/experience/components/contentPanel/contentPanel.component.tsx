@@ -1,18 +1,25 @@
 import { CSSProperties } from 'react'
+import { useIntl } from 'react-intl'
 import { motion } from 'framer-motion'
 import { useTheme } from '@mui/material'
 import { MOTION_PROPS } from 'constants/motion'
 import styles from './contentPanel.module.css'
 
+type Message = {
+  id: string
+  defaultMessage: string
+}
+
 type Props = {
-  title: string
+  title: Message
   company: string
   url: string
-  actions: { id: number; description: string }[]
+  actions: { id: number; description: Message }[]
 }
 
 export const ContentPanel = ({ title, actions, company, url }: Props) => {
   const { palette } = useTheme()
+  const intl = useIntl()
   const customStyles = {
     '--anchorColor': palette.primary.main,
     '--listStyle': palette.primary.main,
@@ -23,7 +30,7 @@ export const ContentPanel = ({ title, actions, company, url }: Props) => {
         <a href={url} target="_blank">
           {company}
         </a>
-        {title}
+        {intl.formatMessage(title)}
       </motion.p>
       <ul className={styles.actions}>
         {actions.map(({ description, id }) => (
@@ -32,7 +39,7 @@ export const ContentPanel = ({ title, actions, company, url }: Props) => {
             className={styles.items}
             {...MOTION_PROPS}
             transition={{ duration: 0.4 + id }}>
-            {description}
+            {intl.formatMessage(description)}
           </motion.li>
         ))}
       </ul>

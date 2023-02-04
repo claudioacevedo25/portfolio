@@ -34,8 +34,8 @@ export const Header = () => {
         </motion.div>
       </Link>
       <motion.div {...motionProps} transition={{ duration: 0.4 }} className={styles.selectors}>
-        <SelectLang onClick={toggleLanguage} selectedLang={language} />
         <ThemeSwitch onClick={toggleColorMode} />
+        <SelectLang onClick={toggleLanguage} selectedLang={language} />
       </motion.div>
     </div>
   )

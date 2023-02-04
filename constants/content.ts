@@ -1,6 +1,8 @@
 import { messages } from 'components/modules/about/about.messages'
+import { EXPERIENCE_MSN } from 'components/modules/experience/experience.messages'
 
 const ABOUT_ME = {
+  title: messages.title,
   content: [
     {
       id: 0.1,
@@ -49,8 +51,8 @@ const SKILLS = [
 ]
 
 const EXPERIENCE = {
-  title: `Experience`,
-  subtitle: `Discover my recent professional journey in this section where I showcase my work experiences and achievements.`,
+  title: EXPERIENCE_MSN.title,
+  subtitle: EXPERIENCE_MSN.subtitle,
   companies: [
     {
       id: 0,
@@ -70,23 +72,23 @@ const EXPERIENCE = {
       id: 0,
       company: 'Folcode',
       url: 'https://folcode.com/',
-      title: ` is a software company. The headquarters in San Juan, Argentina. Some tasks here: `,
+      title: EXPERIENCE_MSN.tasks.folcode.title,
       actions: [
         {
           id: 0.1,
-          description: `Component development and implementation of reusable UI library in BITCloud`,
+          description: EXPERIENCE_MSN.tasks.folcode.one,
         },
         {
           id: 0.2,
-          description: `Implementing authentication and authorization with KeyCloak.`,
+          description: EXPERIENCE_MSN.tasks.folcode.two,
         },
         {
           id: 0.3,
-          description: `Next js, React js, modular css projects with best practices implementing SOLID principles.`,
+          description: EXPERIENCE_MSN.tasks.folcode.tree,
         },
         {
           id: 0.4,
-          description: `Content creation and teaching in Folcademy's courses.`,
+          description: EXPERIENCE_MSN.tasks.folcode.four,
         },
       ],
     },
@@ -94,19 +96,23 @@ const EXPERIENCE = {
       id: 1,
       company: 'Splight',
       url: 'https://www.splight-ai.com/',
-      title: ` is an artificial intelligence company striving to achieve sustainability through technological innovation. Some tasks here:`,
+      title: EXPERIENCE_MSN.tasks.splight.title,
       actions: [
         {
           id: 0.1,
-          description: `Platform development based on data obtained from artificial intelligence and machine learning.`,
+          description: EXPERIENCE_MSN.tasks.splight.one,
         },
         {
           id: 0.2,
-          description: `Development of a library of reusable UI components in NPM with React Js.`,
+          description: EXPERIENCE_MSN.tasks.splight.two,
         },
         {
           id: 0.3,
-          description: `Implementing authentication and authorization with Auth0.`,
+          description: EXPERIENCE_MSN.tasks.splight.tree,
+        },
+        {
+          id: 0.4,
+          description: EXPERIENCE_MSN.tasks.splight.four,
         },
       ],
     },
@@ -114,19 +120,23 @@ const EXPERIENCE = {
       id: 2,
       company: 'Bitlogic',
       url: 'https://www.bitlogic.io/',
-      title: ` is a software company. The headquarters in Córdoba, Argentina. Some tasks here:`,
+      title: EXPERIENCE_MSN.tasks.bitlogic.title,
       actions: [
         {
           id: 0.1,
-          description: `Development and implementation of a Q&A section applied to sports science. .`,
+          description: EXPERIENCE_MSN.tasks.bitlogic.one,
         },
         {
           id: 0.2,
-          description: `Authentication and authorization with Auth0.`,
+          description: EXPERIENCE_MSN.tasks.bitlogic.two,
         },
         {
           id: 0.3,
-          description: `General SEO improvements.`,
+          description: EXPERIENCE_MSN.tasks.bitlogic.tree,
+        },
+        {
+          id: 0.4,
+          description: EXPERIENCE_MSN.tasks.bitlogic.four,
         },
       ],
     },
