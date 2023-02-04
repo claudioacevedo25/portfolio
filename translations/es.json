@@ -31,5 +31,11 @@
   "experience.tasks.bitlogic.one": "Desarrollo e implementación de una sección de preguntas y respuestas aplicadas a la ciencia del deporte.",
   "experience.tasks.bitlogic.two": "Autenticación y autorización con Auth0.",
   "experience.tasks.bitlogic.tree": "Mejoras generales de SEO.",
-  "experience.tasks.bitlogic.four": "Implementación de testeo con TDD and BDD."
+  "experience.tasks.bitlogic.four": "Implementación de testeo con TDD and BDD.",
+
+  "projects.title": "Proyectos",
+  "projects.subtitle": "Aquí encontrarás una colección de mi trabajo. Para brindarte una comprensión completa de mis habilidades, he hecho disponibles tanto los sitios web  como el código fuente correspondiente en GitHub.",
+  "projects.psychology.description": "Sitio para el profesional de la psicología. Contacto, datos, información,  son algunas de las secciones.",
+  "projects.travel.description": "Landing page responsiva para una empresa turística. Con información relevante y de contacto.",
+  "projects.own.description": "Mi propio sitio web."
 }

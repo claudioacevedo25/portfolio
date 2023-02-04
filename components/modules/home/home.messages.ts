@@ -1,4 +1,4 @@
-export const messages = {
+export const HOME_MSN = {
   greeting: {
     id: 'home.greeting',
     defaultMessage: 'Hi, my name is',
@@ -10,9 +10,5 @@ export const messages = {
   subtitle: {
     id: 'home.subtitle',
     defaultMessage: `As a frontend-focused software engineer, I am dedicated to bringing innovative and high-performing solutions to the digital landscape. Whether it's a complex web application or a simple landing page, I bring expertise, attention to detail, and a passion for crafting exceptional digital products.`,
-  },
-  page: {
-    id: 'page.home',
-    defaultMessage: 'Home',
   },
 }

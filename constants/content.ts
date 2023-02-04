@@ -1,24 +1,24 @@
-import { messages } from 'components/modules/about/about.messages'
+import { ABOUT_MSN } from 'components/modules/about/about.messages'
 import { EXPERIENCE_MSN } from 'components/modules/experience/experience.messages'
 
 const ABOUT_ME = {
-  title: messages.title,
+  title: ABOUT_MSN.title,
   content: [
     {
       id: 0.1,
-      content: messages.description.first,
+      content: ABOUT_MSN.description.first,
     },
     {
       id: 0.2,
-      content: messages.description.second,
+      content: ABOUT_MSN.description.second,
     },
     {
       id: 0.3,
-      content: messages.description.third,
+      content: ABOUT_MSN.description.third,
     },
     {
       id: 0.4,
-      content: messages.description.fourth,
+      content: ABOUT_MSN.description.fourth,
     },
   ],
 }

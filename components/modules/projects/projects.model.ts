@@ -2,8 +2,13 @@ export type CardProps = {
   id: number
   name: string
   urls: URLs
-  description: string
+  description: Message
   technologies: Technology[]
+}
+
+export type Message = {
+  id: string
+  defaultMessage: string
 }
 
 type URLs = {

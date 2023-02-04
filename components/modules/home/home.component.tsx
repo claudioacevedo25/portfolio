@@ -2,10 +2,10 @@ import { useTheme } from '@mui/material'
 import { motion } from 'framer-motion'
 import { useIntl } from 'react-intl'
 import { MOTION_PROPS } from 'constants/motion'
-import { messages } from './home.messages'
+import { HOME_MSN } from './home.messages'
 import styles from './home.module.css'
 
-const { greeting, subtitle, title } = messages
+const { greeting, subtitle, title } = HOME_MSN
 
 export const Home = () => {
   const { palette } = useTheme()

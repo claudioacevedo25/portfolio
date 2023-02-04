@@ -1,4 +1,4 @@
-export const messages = {
+export const ABOUT_MSN = {
   title: {
     id: 'about.title',
     defaultMessage: 'About me',

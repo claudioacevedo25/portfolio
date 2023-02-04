@@ -1,7 +1,8 @@
+import { PROJECTS_MSN } from 'components/modules/projects/projects.messages'
+
 const PROJECTS = {
-  title: 'Projects',
-  subtitle:
-    'Here, you will find a collection of my work. To give you a complete understanding of my capabilities, I have made both the live websites and the corresponding source code available on GitHub.',
+  title: PROJECTS_MSN.title,
+  subtitle: PROJECTS_MSN.subtitle,
   projects: [
     {
       id: 0,
@@ -11,8 +12,7 @@ const PROJECTS = {
         site: 'https://psicologa-rominagambino.vercel.app/',
         github: 'https://github.com/claudioacevedo25/psicologa-rominagambino',
       },
-      description:
-        'Site for the psychology professional. Contact, information, data are some of the sections.',
+      description: PROJECTS_MSN.projects.psychology,
       technologies: [
         {
           id: 0,
@@ -40,7 +40,7 @@ const PROJECTS = {
         site: 'https://annapurna.tur.ar/',
         github: 'https://github.com/claudioacevedo25/annapurna',
       },
-      description: 'Landing page for a tourism company. With relevant and contact information.',
+      description: PROJECTS_MSN.projects.travel,
       technologies: [
         {
           id: 0,
@@ -64,7 +64,7 @@ const PROJECTS = {
         site: '/',
         github: 'https://github.com/claudioacevedo25/portfolio',
       },
-      description: 'My own web site.',
+      description: PROJECTS_MSN.projects.own,
       technologies: [
         {
           id: 0,
@@ -85,6 +85,10 @@ const PROJECTS = {
         {
           id: 4,
           name: ' Material UI ',
+        },
+        {
+          id: 5,
+          name: ' React-Intl ',
         },
       ],
     },

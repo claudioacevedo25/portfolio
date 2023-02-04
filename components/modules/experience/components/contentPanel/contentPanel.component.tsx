@@ -3,12 +3,8 @@ import { useIntl } from 'react-intl'
 import { motion } from 'framer-motion'
 import { useTheme } from '@mui/material'
 import { MOTION_PROPS } from 'constants/motion'
+import { Message } from 'components/modules/projects/projects.model'
 import styles from './contentPanel.module.css'
-
-type Message = {
-  id: string
-  defaultMessage: string
-}
 
 type Props = {
   title: Message
