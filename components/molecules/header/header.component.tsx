@@ -6,11 +6,18 @@ import { useTheme } from '@mui/material/styles'
 import { MOTION_PROPS } from 'constants/motion'
 import { ThemeSwitch } from 'components/atoms/switch'
 import styles from './header.module.css'
+import { SelectLang } from 'components/atoms/selectLang'
+import { Language } from 'components/atoms/selectLang/selectLang.component'
 
 const motionProps = {
   ...MOTION_PROPS,
   transition: { duration: 0.2 },
 }
+
+const LANGUAGES: Language[] = [
+  { id: 1, language: 'en' },
+  { id: 2, language: 'es' },
+]
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} })
 
@@ -34,7 +41,12 @@ export const Header = () => {
           />
         </motion.div>
       </Link>
-      <motion.div {...motionProps} transition={{ duration: 0.4 }}>
+      <motion.div {...motionProps} transition={{ duration: 0.4 }} className={styles.selectors}>
+        <SelectLang
+          languages={LANGUAGES}
+          onClick={() => {}}
+          selectedLang={{ id: 1, language: 'es' }}
+        />
         <ThemeSwitch onClick={colorMode.toggleColorMode} />
       </motion.div>
     </div>

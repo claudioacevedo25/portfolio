@@ -17,6 +17,10 @@
   filter: invert(64%) sepia(20%) saturate(1527%) hue-rotate(348deg) brightness(102%) contrast(104%);
 }
 
+.selectors {
+  display: flex;
+  align-items: center;
+}
 @media (min-width: 768px) {
   .container {
     padding: 5rem 6rem 2rem;

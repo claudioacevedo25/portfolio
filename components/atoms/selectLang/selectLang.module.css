@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  border-radius: 1.25rem;
+  padding: 1px 0.75rem;
+  border: 0.5px solid;
+}
+
+.langButton {
+  background-color: transparent;
+  border: none;
+  color: rgb(var(--color1));
+}
+
+.addPiped {
+  cursor: pointer;
+  opacity: 30%;
+}
+
+.addPiped::after {
+  content: '|';
+  margin: 0 0.5rem;
+}
+
+.langButton:last-child > span:nth-child(1)::after {
+  content: '';
+  margin: 0;
+}
+
+.langButton__active {
+  opacity: 1;
+}
