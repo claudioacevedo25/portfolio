@@ -23,5 +23,9 @@ export const PROJECTS_MSN = {
       id: 'projects.own.description',
       defaultMessage: 'My own web site.',
     },
+    ichoose: {
+      id: 'projects.ichoose.description',
+      defaultMessage: 'An AI model...Under construction.',
+    },
   },
 }

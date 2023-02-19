@@ -37,5 +37,6 @@
   "projects.subtitle": "Aquí encontrarás una colección de mi trabajo. Para brindarte una comprensión completa de mis habilidades, he hecho disponibles tanto los sitios web  como el código fuente correspondiente en GitHub.",
   "projects.psychology.description": "Sitio para el profesional de la psicología. Contacto, datos, información,  son algunas de las secciones.",
   "projects.travel.description": "Landing page responsiva para una empresa turística. Con información relevante y de contacto.",
-  "projects.own.description": "Mi propio sitio web."
+  "projects.own.description": "Mi propio sitio web.",
+  "projects.ichoose.description": "Modelo de Inteligencia Artificial. Experimental. En construcción."
 }

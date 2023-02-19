@@ -92,6 +92,42 @@ const PROJECTS = {
         },
       ],
     },
+    {
+      id: 3,
+      name: 'Ichoose',
+      urls: {
+        picture: '/gpt.webp',
+        site: 'https://ichoose.vercel.app/question-answer',
+        github: 'https://github.com/claudioacevedo25/ichoose',
+      },
+      description: PROJECTS_MSN.projects.ichoose,
+      technologies: [
+        {
+          id: 0,
+          name: ' React -',
+        },
+        {
+          id: 1,
+          name: ' Next -',
+        },
+        {
+          id: 2,
+          name: ' TypeScript -',
+        },
+        {
+          id: 3,
+          name: ' SWR -',
+        },
+        {
+          id: 4,
+          name: ' Firebase -',
+        },
+        {
+          id: 5,
+          name: ' OpenAI ',
+        },
+      ],
+    },
   ],
 }
 

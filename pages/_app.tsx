@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
@@ -24,11 +25,31 @@ export default function App({ Component, pageProps }: AppProps) {
 
   if (animation && !isResumePage) return <Spinner />
   return (
-    <Context>
-      <Layout>
-        <Component {...pageProps} />
-        <Analytics />
-      </Layout>
-    </Context>
+    <>
+      <Head>
+        <title>{'Maxi Pezzotta'}</title>
+        <meta name="description" content="software developer" />
+        <meta
+          name="keywords"
+          content="maximiliano pezzotta, javaScript, react,  next js, framework, github"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ff9f2d" />
+        <link rel="apple-touch-icon" href="/code.svg" />
+        <link rel="icon" href="/code.svg" />
+      </Head>
+      <Context>
+        <Layout>
+          <Component {...pageProps} />
+          <Analytics />
+        </Layout>
+      </Context>{' '}
+      <Context>
+        <Layout>
+          <Component {...pageProps} />
+          <Analytics />
+        </Layout>
+      </Context>
+    </>
   )
 }
