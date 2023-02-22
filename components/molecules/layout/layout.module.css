@@ -16,7 +16,7 @@
 
 .sections button {
   border-radius: 6rem;
-  border-width: 2px;
+  border-width: 1px;
 }
 
 @media (min-width: 768px) {
