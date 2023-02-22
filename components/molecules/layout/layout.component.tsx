@@ -30,9 +30,6 @@ export const Layout = ({ children }: Props) => {
 
   return (
     <>
-      <Head>
-        <title>{'Maxi Pezzotta'}</title>
-      </Head>
       <Header />
       <main className={styles.container}>
         {children}
