@@ -9,6 +9,21 @@ export const EXPERIENCE_MSN = {
       'Discover my recent professional journey in this section where I showcase my work experiences and achievements.',
   },
   tasks: {
+    adsmurai: {
+      title: {
+        id: 'experience.tasks.adsmurai.title',
+        defaultMessage:
+          ' Service and technology inspired by digital experts for digital marketing.. The headquarters in Barcelona, Spain. Some tasks here: ',
+      },
+      one: {
+        id: 'experience.tasks.adsmurai.one',
+        defaultMessage: 'Code maintenance with good practices',
+      },
+      two: {
+        id: 'experience.tasks.adsmurai.two',
+        defaultMessage: 'Implementation of new functionalities, applying unit tests and e2e',
+      },
+    },
     folcode: {
       title: {
         id: 'experience.tasks.folcode.title',

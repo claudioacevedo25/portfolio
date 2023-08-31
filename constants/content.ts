@@ -56,20 +56,40 @@ const EXPERIENCE = {
   companies: [
     {
       id: 0,
-      name: 'Folcode',
+      name: 'Adsmurai',
     },
     {
       id: 1,
-      name: 'Splight',
+      name: 'Folcode',
     },
     {
       id: 2,
+      name: 'Splight',
+    },
+    {
+      id: 3,
       name: 'Bitlogic',
     },
   ],
   tasks: [
     {
       id: 0,
+      company: 'Adsmurai',
+      url: 'https://adsmurai.com/',
+      title: EXPERIENCE_MSN.tasks.adsmurai.title,
+      actions: [
+        {
+          id: 0.1,
+          description: EXPERIENCE_MSN.tasks.adsmurai.one,
+        },
+        {
+          id: 0.2,
+          description: EXPERIENCE_MSN.tasks.adsmurai.two,
+        },
+      ],
+    },
+    {
+      id: 1,
       company: 'Folcode',
       url: 'https://folcode.com/',
       title: EXPERIENCE_MSN.tasks.folcode.title,
@@ -93,7 +113,7 @@ const EXPERIENCE = {
       ],
     },
     {
-      id: 1,
+      id: 2,
       company: 'Splight',
       url: 'https://www.splight-ai.com/',
       title: EXPERIENCE_MSN.tasks.splight.title,
@@ -117,7 +137,7 @@ const EXPERIENCE = {
       ],
     },
     {
-      id: 2,
+      id: 3,
       company: 'Bitlogic',
       url: 'https://www.bitlogic.io/',
       title: EXPERIENCE_MSN.tasks.bitlogic.title,

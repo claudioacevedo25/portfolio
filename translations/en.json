@@ -17,6 +17,9 @@
 
   "experience.title": "Experience",
   "experience.subtitle": "Discover my recent professional journey in this section where I showcase my work experiences and achievements.",
+  "experience.tasks.adsmurai.title": " Service and technology inspired by digital experts for digital marketing.. The headquarters in Barcelona, Spain. Some tasks here: ",
+  "experience.tasks.adsmurai.one": "Code maintenance with good practices",
+  "experience.tasks.adsmurai.two": "Implementation of new functionalities, applying unit tests and e2e",
   "experience.tasks.folcode.title": " is a software company. The headquarters is in San Juan, Argentina. Some tasks here:",
   "experience.tasks.folcode.one": "Component development and implementation of reusable UI library in BITCloud.",
   "experience.tasks.folcode.two": "Implementing authentication and authorization with KeyCloak.",

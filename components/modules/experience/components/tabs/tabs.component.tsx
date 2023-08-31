@@ -41,9 +41,7 @@ export const ExperienceTabs = () => {
   const [value, setValue] = useState(0)
   const matches = useMediaQuery('(min-width:768px)')
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue)
-  }
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => setValue(newValue)
 
   return (
     <div className={styles.container}>
