@@ -128,6 +128,46 @@ const PROJECTS = {
         },
       ],
     },
+    {
+      id: 4,
+      name: 'Pokedex',
+      urls: {
+        picture: '/pokedex.webp',
+        site: 'https://poke-adsmurai.vercel.app/',
+        github: 'https://github.com/claudioacevedo25/poke-adsmurai',
+      },
+      description: PROJECTS_MSN.projects.pokedex,
+      technologies: [
+        {
+          id: 0,
+          name: ' React -',
+        },
+        {
+          id: 1,
+          name: ' Next -',
+        },
+        {
+          id: 2,
+          name: ' TypeScript -',
+        },
+        {
+          id: 3,
+          name: ' SWR -',
+        },
+        {
+          id: 4,
+          name: ' Axios -',
+        },
+        {
+          id: 5,
+          name: ' Eslint - ',
+        },
+        {
+          id: 6,
+          name: ' Material UI ',
+        },
+      ],
+    },
   ],
 }
 

@@ -41,5 +41,6 @@
   "projects.psychology.description": "Sitio para el profesional de la psicología. Contacto, datos, información,  son algunas de las secciones.",
   "projects.travel.description": "Landing page responsiva para una empresa turística. Con información relevante y de contacto.",
   "projects.own.description": "Mi propio sitio web.",
-  "projects.ichoose.description": "Modelo de Inteligencia Artificial. Experimental. En construcción."
+  "projects.ichoose.description": "Modelo de Inteligencia Artificial. Experimental. En construcción.",
+  "projects.pokedex.description": "Un listado de pokemons con el detalle de cada uno de ellos."
 }

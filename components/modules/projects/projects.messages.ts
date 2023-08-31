@@ -27,5 +27,9 @@ export const PROJECTS_MSN = {
       id: 'projects.ichoose.description',
       defaultMessage: 'An AI model...Under construction.',
     },
+    pokedex: {
+      id: 'projects.pokedex.description',
+      defaultMessage: 'List of pokemons with detail od each one.',
+    },
   },
 }
