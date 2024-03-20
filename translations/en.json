@@ -42,5 +42,6 @@
   "projects.travel.description": "Responsive landing page for a tourism company. With relevant and contact information.",
   "projects.own.description": "My own web site.",
   "projects.ichoose.description": "An AI model. Experimental. Under Construction.",
-  "projects.pokedex.description": "List of pokemons with detail od each one."
+  "projects.pokedex.description": "List of pokemons with detail od each one.",
+  "projects.podcast.description": "List of podcast with detail od each one."
 }

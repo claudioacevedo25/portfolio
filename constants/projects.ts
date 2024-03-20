@@ -168,6 +168,46 @@ const PROJECTS = {
         },
       ],
     },
+    {
+      id: 5,
+      name: 'Apple Podcast',
+      urls: {
+        picture: '/podcast.webp',
+        site: 'https://podcast-inditex.vercel.app/',
+        github: 'https://github.com/claudioacevedo25/podcast-inditex',
+      },
+      description: PROJECTS_MSN.projects.podcast,
+      technologies: [
+        {
+          id: 0,
+          name: ' React -',
+        },
+        {
+          id: 1,
+          name: ' Next -',
+        },
+        {
+          id: 2,
+          name: ' TypeScript -',
+        },
+        {
+          id: 3,
+          name: ' SWR -',
+        },
+        {
+          id: 4,
+          name: ' Axios -',
+        },
+        {
+          id: 5,
+          name: ' Eslint - ',
+        },
+        {
+          id: 6,
+          name: ' Material UI ',
+        },
+      ],
+    },
   ],
 }
 

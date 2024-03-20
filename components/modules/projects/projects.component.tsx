@@ -6,6 +6,7 @@ import { PROJECTS } from 'constants/projects'
 import { Card } from './components'
 
 const { projects, title, subtitle } = PROJECTS
+const OWN_PROJECT_ID = 2
 
 export const Projects = () => {
   const intl = useIntl()
@@ -18,11 +19,14 @@ export const Projects = () => {
         {intl.formatMessage(subtitle)}
       </motion.p>
       <div className={styles.cardContainer}>
-        {projects.map((project) => (
-          <motion.div key={project.id} className={styles.card} {...MOTION_PROPS}>
-            <Card {...project} />
-          </motion.div>
-        ))}
+        {projects.map((project) => {
+          if (project.id === OWN_PROJECT_ID) return null
+          return (
+            <motion.div key={project.id} className={styles.card} {...MOTION_PROPS}>
+              <Card {...project} />
+            </motion.div>
+          )
+        })}
       </div>
     </section>
   )

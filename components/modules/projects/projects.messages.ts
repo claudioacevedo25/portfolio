@@ -31,5 +31,9 @@ export const PROJECTS_MSN = {
       id: 'projects.pokedex.description',
       defaultMessage: 'List of pokemons with detail od each one.',
     },
+    podcast: {
+      id: 'projects.podcast.description',
+      defaultMessage: 'List of podcast with detail od each one.',
+    },
   },
 }
