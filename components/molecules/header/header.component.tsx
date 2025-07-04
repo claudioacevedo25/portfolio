@@ -18,25 +18,39 @@ export const Header = () => {
   const { palette } = useTheme()
 
   return (
-    <div className={styles.container}>
-      <Link href="/">
+    <header className={styles.container} role="banner">
+      <Link href="/" aria-label="Go to home page">
         <motion.div
           className={`${styles.logo} ${palette.mode === 'dark' ? styles.invert : ''}`}
-          {...motionProps}>
+          {...motionProps}
+          role="img"
+          aria-label="Logo - Icon representing the portfolio of Maximiliano Pezzotta">
           <Image
             src="/code.svg"
-            alt="code"
+            alt="Logo - Icon representing the portfolio of Maximiliano Pezzotta"
             fill
-            sizes="(max-width: 768px) 100vw,
-              (max-width: 1080px) 50vw,
-              33vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1080px) 50vw, 33vw"
+            priority
           />
         </motion.div>
       </Link>
-      <motion.div {...motionProps} transition={{ duration: 0.4 }} className={styles.selectors}>
-        <ThemeSwitch onClick={toggleColorMode} />
-        <SelectLang onClick={toggleLanguage} selectedLang={language} />
-      </motion.div>
-    </div>
+
+      <motion.nav
+        {...motionProps}
+        transition={{ duration: 0.4 }}
+        className={styles.selectors}
+        role="navigation"
+        aria-label="Theme and language selector">
+        <ThemeSwitch
+          onClick={toggleColorMode}
+          aria-label={`Change to ${palette.mode === 'dark' ? 'light' : 'dark'} theme`}
+        />
+        <SelectLang
+          onClick={toggleLanguage}
+          selectedLang={language}
+          aria-label="Language selector"
+        />
+      </motion.nav>
+    </header>
   )
 }
