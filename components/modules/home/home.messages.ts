@@ -5,10 +5,14 @@ export const HOME_MSN = {
   },
   title: {
     id: 'home.title',
-    defaultMessage: 'Building beautiful experiences for the web.',
+    defaultMessage: 'Frontend Developer specialized in UI/UX with performance focus',
   },
   subtitle: {
     id: 'home.subtitle',
-    defaultMessage: `As a frontend-focused software engineer, I am dedicated to bringing innovative and high-performing solutions to the digital landscape. Whether it's a complex web application or a simple landing page, I bring expertise, attention to detail, and a passion for crafting exceptional digital products.`,
+    defaultMessage: `I transform ideas into exceptional digital experiences, combining intuitive design with optimized code to create products that users truly love to use.`,
+  },
+  cta: {
+    id: 'home.cta',
+    defaultMessage: 'View my projects',
   },
 }
