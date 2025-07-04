@@ -1,5 +1,184 @@
-.image {
+.cardContainer {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+}
+
+.card {
+  max-width: 400px;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  object-position: left;
+  flex-direction: column;
+  position: relative;
+  overflow: visible;
+  transition: all 0.3s ease;
+}
+
+.cardDark {
+  box-shadow: 0 8px 32px rgba(255, 159, 45, 0.1);
+}
+
+.cardDark:hover {
+  box-shadow: 0 16px 64px rgba(255, 159, 45, 0.2);
+}
+
+.cardLight {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.cardLight:hover {
+  box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
+}
+
+.featuredBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.content {
+  flex-grow: 1;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  flex-grow: 1;
+  padding-right: 0.5rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.title :global(h4) {
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.projectTypeChip {
+  font-weight: 500;
+  font-size: 0.55rem;
+  height: 18px;
+  min-width: auto;
+  flex-shrink: 0;
+}
+
+.projectTypeChip :global(.MuiChip-label) {
+  padding: 0 4px;
+}
+
+.description {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-size: 0.85rem;
+  min-height: 3.4rem;
+}
+
+.stackLabel {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.techContainer {
+  display: flex;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.techChip {
+  font-size: 0.5rem;
+  height: 22px;
+  transition: all 0.2s ease;
+  background-color: transparent;
+}
+
+.techChip :global(.MuiChip-label) {
+  padding: 0 4px;
+}
+
+.techChip:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.techChipIcon {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.65rem;
+}
+
+.techChipIconEmoji {
+  font-size: 0.7rem;
+}
+
+.overflowChip {
+  font-size: 0.65rem;
+  height: 22px;
+  opacity: 0.6;
+}
+
+.overflowChip :global(.MuiChip-label) {
+  padding: 0 4px;
+}
+
+.actions {
+  justify-content: space-between;
+  padding: 0 16px 16px;
+}
+
+.actionButton {
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    min-height: 3rem;
+  }
+
+  .techChip:hover,
+  .actionButton:hover {
+    transform: none;
+  }
 }
