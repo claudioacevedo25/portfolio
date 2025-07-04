@@ -6,7 +6,7 @@ export const PROJECTS_MSN = {
   subtitle: {
     id: 'projects.subtitle',
     defaultMessage:
-      'Here, you will find a collection of my work. To give you a complete understanding of my capabilities, I have made both the live websites and the corresponding source code available on GitHub.',
+      'A showcase of my professional evolution through different projects that reflect my technical and creative growth in frontend development.',
   },
   projects: {
     psychology: {
@@ -29,7 +29,8 @@ export const PROJECTS_MSN = {
     },
     pokedex: {
       id: 'projects.pokedex.description',
-      defaultMessage: 'List of pokemons with detail od each one.',
+      defaultMessage:
+        'Interactive Pokedex with detailed Pokemon information and search functionality.',
     },
     podcast: {
       id: 'projects.podcast.description',

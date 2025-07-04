@@ -1,4 +1,5 @@
 import { PROJECTS_MSN } from 'components/modules/projects/projects.messages'
+import { Project } from 'components/modules/projects/projects.model'
 
 const PROJECTS = {
   title: PROJECTS_MSN.title,
@@ -13,22 +14,32 @@ const PROJECTS = {
         github: 'https://github.com/claudioacevedo25/psicologa-rominagambino',
       },
       description: PROJECTS_MSN.projects.psychology,
+      projectType: 'freelance',
+      featured: false,
       technologies: [
         {
           id: 0,
-          name: ' React -',
+          name: 'React',
+          icon: '⚛️',
+          color: '#61DAFB',
         },
         {
           id: 1,
-          name: ' Next -',
+          name: 'Next.js',
+          icon: '▲',
+          color: '#000000',
         },
         {
           id: 2,
-          name: ' Material UI -',
+          name: 'Material UI',
+          icon: '🎨',
+          color: '#007FFF',
         },
         {
           id: 3,
-          name: ' Vercel ',
+          name: 'Vercel',
+          icon: '▲',
+          color: '#000000',
         },
       ],
     },
@@ -41,18 +52,32 @@ const PROJECTS = {
         github: 'https://github.com/claudioacevedo25/annapurna',
       },
       description: PROJECTS_MSN.projects.travel,
+      projectType: 'freelance',
+      featured: false,
       technologies: [
         {
           id: 0,
-          name: ' React -',
+          name: 'React',
+          icon: '⚛️',
+          color: '#61DAFB',
         },
         {
           id: 1,
-          name: ' Next -',
+          name: 'Next.js',
+          icon: '▲',
+          color: '#000000',
         },
         {
           id: 2,
-          name: ' CSS - TypeScript ',
+          name: 'TypeScript',
+          icon: '📘',
+          color: '#3178C6',
+        },
+        {
+          id: 3,
+          name: 'CSS',
+          icon: '🎨',
+          color: '#1572B6',
         },
       ],
     },
@@ -65,106 +90,108 @@ const PROJECTS = {
         github: 'https://github.com/claudioacevedo25/portfolio',
       },
       description: PROJECTS_MSN.projects.own,
+      projectType: 'personal',
+      featured: false,
       technologies: [
         {
           id: 0,
-          name: ' React -',
+          name: 'React',
+          icon: '⚛️',
+          color: '#61DAFB',
         },
         {
           id: 1,
-          name: ' Next -',
+          name: 'Next.js',
+          icon: '▲',
+          color: '#000000',
         },
         {
           id: 2,
-          name: ' TypeScript -',
+          name: 'TypeScript',
+          icon: '📘',
+          color: '#3178C6',
         },
         {
           id: 3,
-          name: ' Vercel -',
-        },
-        {
-          id: 4,
-          name: ' Material UI ',
-        },
-        {
-          id: 5,
-          name: ' React-Intl ',
+          name: 'Material UI',
+          icon: '🎨',
+          color: '#007FFF',
         },
       ],
     },
     {
       id: 3,
-      name: 'Ichoose',
-      urls: {
-        picture: '/gpt.webp',
-        site: 'https://ichoose.vercel.app/question-answer',
-        github: 'https://github.com/claudioacevedo25/ichoose',
-      },
-      description: PROJECTS_MSN.projects.ichoose,
-      technologies: [
-        {
-          id: 0,
-          name: ' React -',
-        },
-        {
-          id: 1,
-          name: ' Next -',
-        },
-        {
-          id: 2,
-          name: ' TypeScript -',
-        },
-        {
-          id: 3,
-          name: ' SWR -',
-        },
-        {
-          id: 4,
-          name: ' Firebase -',
-        },
-        {
-          id: 5,
-          name: ' OpenAI ',
-        },
-      ],
-    },
-    {
-      id: 4,
-      name: 'Pokedex',
+      name: 'Pokedex App',
       urls: {
         picture: '/pokedex.webp',
         site: 'https://poke-adsmurai.vercel.app/',
         github: 'https://github.com/claudioacevedo25/poke-adsmurai',
       },
       description: PROJECTS_MSN.projects.pokedex,
+      projectType: 'personal',
+      featured: false,
       technologies: [
         {
           id: 0,
-          name: ' React -',
+          name: 'React',
+          icon: '⚛️',
+          color: '#61DAFB',
         },
         {
           id: 1,
-          name: ' Next -',
+          name: 'TypeScript',
+          icon: '📘',
+          color: '#3178C6',
         },
         {
           id: 2,
-          name: ' TypeScript -',
+          name: 'SWR',
+          icon: '🔄',
+          color: '#000000',
         },
         {
           id: 3,
-          name: ' SWR -',
+          name: 'Material UI',
+          icon: '🎨',
+          color: '#007FFF',
+        },
+      ],
+    },
+    {
+      id: 4,
+      name: 'iChoose AI',
+      urls: {
+        picture: '/gpt.webp',
+        site: 'https://ichoose.vercel.app/question-answer',
+        github: 'https://github.com/claudioacevedo25/ichoose',
+      },
+      description: PROJECTS_MSN.projects.ichoose,
+      projectType: 'personal',
+      featured: true,
+      technologies: [
+        {
+          id: 0,
+          name: 'React',
+          icon: '⚛️',
+          color: '#61DAFB',
         },
         {
-          id: 4,
-          name: ' Axios -',
+          id: 1,
+          name: 'Next.js',
+          icon: '▲',
+          color: '#000000',
         },
         {
-          id: 5,
-          name: ' Eslint - ',
+          id: 2,
+          name: 'OpenAI',
+          icon: '🤖',
+          color: '#412991',
         },
         {
-          id: 6,
-          name: ' Material UI ',
+          id: 3,
+          name: 'Firebase',
+          icon: '🔥',
+          color: '#FFCA28',
         },
       ],
     },
@@ -177,38 +204,36 @@ const PROJECTS = {
         github: 'https://github.com/claudioacevedo25/podcast-inditex',
       },
       description: PROJECTS_MSN.projects.podcast,
+      projectType: 'personal',
+      featured: false,
       technologies: [
         {
           id: 0,
-          name: ' React -',
+          name: 'React',
+          icon: '⚛️',
+          color: '#61DAFB',
         },
         {
           id: 1,
-          name: ' Next -',
+          name: 'Next.js',
+          icon: '▲',
+          color: '#000000',
         },
         {
           id: 2,
-          name: ' TypeScript -',
+          name: 'TypeScript',
+          icon: '📘',
+          color: '#3178C6',
         },
         {
           id: 3,
-          name: ' SWR -',
-        },
-        {
-          id: 4,
-          name: ' Axios -',
-        },
-        {
-          id: 5,
-          name: ' Eslint - ',
-        },
-        {
-          id: 6,
-          name: ' Material UI ',
+          name: 'SWR',
+          icon: '🔄',
+          color: '#06B6D4',
         },
       ],
     },
-  ],
+  ] as Project[],
 }
 
 export { PROJECTS }

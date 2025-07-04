@@ -4,6 +4,8 @@ export type CardProps = {
   urls: URLs
   description: Message
   technologies: Technology[]
+  projectType: ProjectType
+  featured?: boolean
 }
 
 export type Message = {
@@ -11,13 +13,27 @@ export type Message = {
   defaultMessage: string
 }
 
-type URLs = {
+export type ProjectType = 'freelance' | 'personal' | 'collaborative'
+
+export type URLs = {
   picture: string
   site: string
   github: string
 }
 
-type Technology = {
+export type Technology = {
   id: number
   name: string
+  icon?: string
+  color?: string
+}
+
+export type Project = {
+  id: number
+  name: string
+  urls: URLs
+  description: Message
+  technologies: Technology[]
+  projectType: ProjectType
+  featured: boolean
 }
