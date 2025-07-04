@@ -6,8 +6,9 @@
   "pages.resume": "Curriculum",
 
   "home.greeting": "Hola, mi nombre es",
-  "home.title": "Construyendo experiencias atractivas para la web.",
-  "home.subtitle": "Como ingeniero de software con enfoque en el frontend, me dedico a aportar soluciones innovadoras y de alto rendimiento al entorno digital. Sea cual sea el proyecto, ya sea una aplicación web compleja o una landing page, aporto mi experiencia, atención al detalle y mi pasión por crear productos digitales sobresalientes.",
+  "home.title": "Frontend Developer especializado en UI/UX con enfoque en performance",
+  "home.subtitle": "Transformo ideas en experiencias digitales excepcionales, combinando diseño intuitivo con código optimizado para crear productos que los usuarios realmente aman usar.",
+  "home.cta": "Ver mis proyectos",
 
   "about.title": "Sobre mi",
   "about.description.first": "Hola! Soy Maximiliano, desarrollador de software con pasión por crear soluciones innovadoras para internet. Mi camino en el desarrollo de software comenzó en 2018, cuando incursioné en la creación de sitios web. Desde entonces, he perfeccionado mis habilidades en HTML, CSS y JavaScript, y he tenido la oportunidad de trabajar con algunas de las compañías de software y corporaciones más grandes, donde he contribuido a la creación de productos digitales accesibles e inclusivos.",
@@ -37,7 +38,7 @@
   "experience.tasks.bitlogic.four": "Implementación de testeo con TDD and BDD.",
 
   "projects.title": "Proyectos",
-  "projects.subtitle": "Aquí encontrarás una colección de mi trabajo. Para brindarte una comprensión completa de mis habilidades, he hecho disponibles tanto los sitios web  como el código fuente correspondiente en GitHub.",
+  "projects.subtitle": "Una muestra de mi evolución profesional a través de diferentes proyectos que reflejan mi crecimiento técnico y creativo en el desarrollo frontend.",
   "projects.psychology.description": "Sitio para el profesional de la psicología. Contacto, datos, información,  son algunas de las secciones.",
   "projects.travel.description": "Landing page responsiva para una empresa turística. Con información relevante y de contacto.",
   "projects.own.description": "Mi propio sitio web.",
