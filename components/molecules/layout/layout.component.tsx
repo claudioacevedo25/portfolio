@@ -35,7 +35,7 @@ export const Layout = ({ children }: Props) => {
         {children}
         <motion.div {...MOTION_PROPS} transition={{ duration: 0.8 }} className={styles.sections}>
           {PAGES.map(({ href, title, id }) => {
-            if (router.route === href) return null
+            if (router.route === href || (router.route === '/' && href === '/projects')) return null
             return (
               <Button
                 key={id}
