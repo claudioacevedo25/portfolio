@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   padding: 0 2rem;
   padding-bottom: 1rem;
   gap: 1rem;
@@ -52,30 +52,20 @@
 
 .picture {
   position: relative;
-  width: 100%;
-  height: 20rem;
-  margin: auto;
-  margin-top: 2.5rem;
-  background-color: transparent;
+  width: 12rem;
+  height: 12rem;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
 }
 
-@media (min-width: 440px) {
-  .picture {
-    width: 90%;
-    height: 23rem;
-  }
-}
-@media (min-width: 560px) {
-  .picture {
-    width: 80%;
-    height: 25rem;
-  }
+.picture:hover {
+  transform: scale(1.05);
 }
 
 @media (min-width: 768px) {
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     gap: 2rem;
     padding: 0 6rem;
   }
@@ -95,9 +85,9 @@
   }
 
   .picture {
-    margin-top: auto;
-    width: 90%;
-    height: 23rem;
+    width: 16rem;
+    height: 16rem;
+    margin: 0;
   }
 }
 
@@ -110,7 +100,7 @@
 
 @media (min-width: 1360px) {
   .picture {
-    width: 60%;
-    height: 23rem;
+    width: 18rem;
+    height: 18rem;
   }
 }

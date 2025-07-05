@@ -78,19 +78,21 @@ export const About = () => {
 
       <motion.div
         className={styles.picture}
-        initial={{ opacity: 0, x: 60 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }}
+        transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
+        whileHover={{ scale: 1.05 }}
         role="img"
         aria-label="Profile picture section">
         <Image
           src="/profile.webp"
           alt="Profile picture of Maximiliano Pezzotta, Frontend Developer specialized in React and TypeScript"
-          sizes="(max-width: 768px) 100vw, (max-width: 1080px) 50vw, 33vw"
+          sizes="(max-width: 768px) 16rem, (max-width: 1080px) 16rem, 18rem"
           fill
           loading="lazy"
           priority={false}
+          style={{ objectFit: 'cover' }}
         />
       </motion.div>
     </section>
