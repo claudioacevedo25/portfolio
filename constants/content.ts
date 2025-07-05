@@ -20,6 +20,14 @@ const ABOUT_ME = {
       id: 0.4,
       content: ABOUT_MSN.description.fourth,
     },
+    {
+      id: 0.5,
+      content: ABOUT_MSN.description.fifth,
+    },
+    {
+      id: 0.6,
+      content: ABOUT_MSN.description.sixth,
+    },
   ],
 }
 
@@ -34,19 +42,55 @@ const SKILLS = [
   },
   {
     id: 0.3,
-    name: 'React Js',
+    name: 'React.js',
   },
   {
     id: 0.4,
-    name: 'Next Js',
+    name: 'Next.js',
   },
   {
     id: 0.5,
-    name: 'Keycloak',
+    name: 'Vite',
   },
   {
     id: 0.6,
+    name: 'Vitest',
+  },
+  {
+    id: 0.7,
+    name: 'Jest',
+  },
+  {
+    id: 0.8,
+    name: 'React Testing Library',
+  },
+  {
+    id: 0.9,
+    name: 'Cypress',
+  },
+  {
+    id: 0.1,
+    name: 'Storybook',
+  },
+  {
+    id: 0.11,
+    name: 'Keycloak',
+  },
+  {
+    id: 0.12,
     name: 'Bit.io',
+  },
+  {
+    id: 0.13,
+    name: 'Sass',
+  },
+  {
+    id: 0.14,
+    name: 'Sentry',
+  },
+  {
+    id: 0.15,
+    name: 'CI/CD workflows',
   },
 ]
 

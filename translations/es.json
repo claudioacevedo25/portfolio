@@ -11,10 +11,12 @@
   "home.cta": "Ver mis proyectos",
 
   "about.title": "Sobre mi",
-  "about.description.first": "Hola! Soy Maximiliano, desarrollador de software con pasión por crear soluciones innovadoras para internet. Mi camino en el desarrollo de software comenzó en 2018, cuando incursioné en la creación de sitios web. Desde entonces, he perfeccionado mis habilidades en HTML, CSS y JavaScript, y he tenido la oportunidad de trabajar con algunas de las compañías de software y corporaciones más grandes, donde he contribuido a la creación de productos digitales accesibles e inclusivos.",
-  "about.description.second": "Continúo mejorando mis habilidades y manteniéndome al día con las últimas tecnologías para crear soluciones digitales centradas en el usuario que sean de alta calidad, confiables y cumplan con las necesidades del cliente. Mi objetivo es crear experiencias digitales impactantes y funcionales.",
-  "about.description.third": "Además de mi experiencia profesional, también soy mentor y profesor, habiendo participado en la creación de un curso integral sobre Next.js, API Rest, React.js y Material UI. Siempre estoy buscando oportunidades para compartir mis conocimientos y ayudar a otros a crecer en sus carreras.",
-  "about.description.fourth": "Aquí hay algunas tecnologías con las que he estado trabajando recientemente:",
+  "about.description.first": "¡Hola! Soy Maximiliano, desarrollador de software con pasión por crear soluciones digitales innovadoras, accesibles y centradas en el usuario.",
+  "about.description.second": "Comencé mi camino en el desarrollo en 2018, creando sitios web por curiosidad, y desde entonces he perfeccionado mis habilidades en HTML, CSS y JavaScript. A lo largo de los años, he trabajado en proyectos para algunas de las compañías de software más importantes, contribuyendo al desarrollo de productos digitales funcionales e inclusivos.",
+  "about.description.third": "Siempre estoy buscando formas de mejorar tanto técnica como profesionalmente. Me esfuerzo por mantenerme actualizado con las últimas tecnologías, frameworks modernos y buenas prácticas para crear experiencias digitales de alta calidad, escalables y confiables.",
+  "about.description.fourth": "Además de mi experiencia como desarrollador, también soy mentor y profesor. Participé en la creación de un curso integral sobre desarrollo con Next.js, APIs REST, React.js y Material UI, donde combiné teoría y práctica para ayudar a otros a crecer en sus carreras.",
+  "about.description.fifth": "Últimamente, he estado explorando con entusiasmo el uso de herramientas de inteligencia artificial aplicadas al desarrollo, incluyendo modelos de lenguaje (LLMs), agentes IA y MCP. Creo firmemente que la IA marcará un antes y un después en cómo diseñamos, desarrollamos y colaboramos en proyectos digitales.",
+  "about.description.sixth": "Aquí hay algunas tecnologías con las que he estado trabajando recientemente:",
 
   "experience.title": "Experiencia",
   "experience.subtitle": "Descubre mi reciente viaje profesional en esta sección donde muestro mis experiencias laborales y logros.",

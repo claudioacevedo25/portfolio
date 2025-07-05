@@ -23,6 +23,10 @@
   line-height: 1.334;
 }
 
+.description {
+  margin-bottom: 1rem;
+}
+
 .skills {
   display: grid;
   grid-template-columns: repeat(2, minmax(8.75rem, 12.5rem));

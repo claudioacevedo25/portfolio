@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useIntl } from 'react-intl'
 import { useTheme } from '@mui/material'
 import { ABOUT_ME, SKILLS } from 'constants/content'
-import { MOTION_PROPS } from 'constants/motion'
+import { STAGGER_CONTAINER, STAGGER_ITEM } from 'constants/motion'
 import styles from './about.module.css'
 
 const { title, content } = ABOUT_ME
@@ -12,40 +12,85 @@ const { title, content } = ABOUT_ME
 export const About = () => {
   const { palette } = useTheme()
   const intl = useIntl()
+
+  const isDark = palette.mode === 'dark'
+  const listColor = isDark ? '#ff9f2d' : '#f98600'
+  const hoverColor = isDark ? '#ff9f2d' : '#2196F3'
+
   const customStyles = {
-    '--listStyle': palette.primary.main,
+    '--listStyle': listColor,
   } as CSSProperties
+
   return (
-    <section className={styles.container} style={customStyles}>
+    <section className={styles.container} style={customStyles} aria-labelledby="about-title">
       <div className={styles.content}>
-        <motion.h1 className={styles.title} {...MOTION_PROPS} animate={{ opacity: 1, scale: 1 }}>
+        <motion.h1
+          id="about-title"
+          className={styles.title}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}>
           {intl.formatMessage(title)}
         </motion.h1>
-        {content.map(({ id, content }) => (
-          <motion.p
-            {...MOTION_PROPS}
-            transition={{ duration: 0.4 + id }}
-            className={styles.description}
-            key={id}>
-            {intl.formatMessage(content)}
-          </motion.p>
-        ))}
-        <ul className={styles.skills}>
-          {SKILLS.map(({ id, name }) => (
-            <motion.li key={id} {...MOTION_PROPS} transition={{ duration: 0.5 + id }}>
-              {name}
-            </motion.li>
+
+        <motion.div
+          variants={STAGGER_CONTAINER}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2 }}
+          role="region"
+          aria-label="Personal information">
+          {content.map(({ id, content }) => (
+            <motion.p variants={STAGGER_ITEM} className={styles.description} key={id}>
+              {intl.formatMessage(content)}
+            </motion.p>
           ))}
-        </ul>
+        </motion.div>
+
+        <motion.div
+          variants={STAGGER_CONTAINER}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2 }}
+          role="region"
+          aria-label="Technical skills">
+          <ul className={styles.skills} role="list" aria-label="List of technologies">
+            {SKILLS.map(({ id, name }) => (
+              <motion.li
+                key={id}
+                variants={STAGGER_ITEM}
+                whileHover={{
+                  scale: 1.05,
+                  color: hoverColor,
+                  transition: { duration: 0.2 },
+                }}
+                animate={{
+                  color: 'inherit',
+                }}
+                role="listitem">
+                {name}
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
       </div>
-      <motion.div className={styles.picture} {...MOTION_PROPS}>
+
+      <motion.div
+        className={styles.picture}
+        initial={{ opacity: 0, x: 60 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }}
+        role="img"
+        aria-label="Profile picture section">
         <Image
           src="/profile.webp"
-          alt="profile-pic"
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1080px) 50vw,
-              33vw"
+          alt="Profile picture of Maximiliano Pezzotta, Frontend Developer specialized in React and TypeScript"
+          sizes="(max-width: 768px) 100vw, (max-width: 1080px) 50vw, 33vw"
           fill
+          loading="lazy"
+          priority={false}
         />
       </motion.div>
     </section>
