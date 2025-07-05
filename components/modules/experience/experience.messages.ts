@@ -13,15 +13,32 @@ export const EXPERIENCE_MSN = {
       title: {
         id: 'experience.tasks.adsmurai.title',
         defaultMessage:
-          ' Service and technology inspired by digital experts for digital marketing.. The headquarters in Barcelona, Spain. Some tasks here: ',
+          ' Service and technology inspired by digital experts for digital marketing. The headquarters in Barcelona, Spain. Some tasks here: ',
       },
       one: {
         id: 'experience.tasks.adsmurai.one',
-        defaultMessage: 'Code maintenance with good practices',
+        defaultMessage:
+          'Conception, development and maintenance of data transformation platform to optimized feeds (digital marketing).',
       },
       two: {
         id: 'experience.tasks.adsmurai.two',
-        defaultMessage: 'Implementation of new functionalities, applying unit tests and e2e',
+        defaultMessage:
+          'Participated in the design and development of interactive dashboards for multiple clients simultaneously, optimizing key metrics visualization through widgets and charts.',
+      },
+      three: {
+        id: 'experience.tasks.adsmurai.three',
+        defaultMessage:
+          'Maintenance and updating of reusable React.js component library, published on npm and used as a base in multiple internal company projects.',
+      },
+      four: {
+        id: 'experience.tasks.adsmurai.four',
+        defaultMessage:
+          'Implementation and optimization of React ecosystem using latest Vite versions, improving performance and significantly reducing loading and compilation times in projects.',
+      },
+      five: {
+        id: 'experience.tasks.adsmurai.five',
+        defaultMessage:
+          'Participation in recruitment processes for new developers and mentoring them.',
       },
     },
     folcode: {

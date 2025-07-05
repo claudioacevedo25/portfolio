@@ -130,6 +130,18 @@ const EXPERIENCE = {
           id: 0.2,
           description: EXPERIENCE_MSN.tasks.adsmurai.two,
         },
+        {
+          id: 0.3,
+          description: EXPERIENCE_MSN.tasks.adsmurai.three,
+        },
+        {
+          id: 0.4,
+          description: EXPERIENCE_MSN.tasks.adsmurai.four,
+        },
+        {
+          id: 0.5,
+          description: EXPERIENCE_MSN.tasks.adsmurai.five,
+        },
       ],
     },
     {
