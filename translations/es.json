@@ -20,6 +20,10 @@
 
   "experience.title": "Experiencia",
   "experience.subtitle": "Descubre mi reciente viaje profesional en esta sección donde muestro mis experiencias laborales y logros.",
+  "experience.periods.adsmurai": "Junio 2023 - Presente",
+  "experience.periods.folcode": "Abril 2022 - Junio 2023",
+  "experience.periods.splight": "Enero 2022 - Marzo 2022",
+  "experience.periods.bitlogic": "Enero 2021 - Diciembre 2021",
   "experience.tasks.adsmurai.title": " Servicio y tecnologías inspirada por expertos digitales para marketing. La sede principal está en Barcelona, España. Aquí algunas tareas: ",
   "experience.tasks.adsmurai.one": "Concepción, desarrollo y mantenimiento de plataforma de transformación de datos a feeds optimizados (marketing digital).",
   "experience.tasks.adsmurai.two": "Participé en el diseño y desarrollo de dashboards interactivos para múltiples clientes en simultáneo, optimizando la visualización de métricas claves mediante widgets y gráficos.",

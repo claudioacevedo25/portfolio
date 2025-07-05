@@ -20,6 +20,10 @@
 
   "experience.title": "Experience",
   "experience.subtitle": "Discover my recent professional journey in this section where I showcase my work experiences and achievements.",
+  "experience.periods.adsmurai": "June 2023 - Present",
+  "experience.periods.folcode": "April 2022 - June 2023",
+  "experience.periods.splight": "January 2022 - March 2022",
+  "experience.periods.bitlogic": "January 2021 - December 2021",
   "experience.tasks.adsmurai.title": " Service and technology inspired by digital experts for digital marketing. The headquarters in Barcelona, Spain. Some tasks here: ",
   "experience.tasks.adsmurai.one": "Conception, development and maintenance of data transformation platform to optimized feeds (digital marketing).",
   "experience.tasks.adsmurai.two": "Participated in the design and development of interactive dashboards for multiple clients simultaneously, optimizing key metrics visualization through widgets and charts.",

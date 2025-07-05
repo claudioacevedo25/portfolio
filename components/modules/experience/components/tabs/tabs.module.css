@@ -1,24 +1,388 @@
 .container {
   display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 400px;
+}
+
+.timeline {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ff9f2d, #ffa726);
+  border-radius: 2px;
+  transform-origin: top center;
+  box-shadow: 0 0 10px rgba(255, 159, 45, 0.3);
+}
+
+.tabs {
+  display: flex;
   flex-direction: column;
-  min-height: 15rem;
+  gap: 0.5rem;
+  position: relative;
+  min-width: 280px;
+  padding-left: 2rem;
 }
 
-.tabPanel {
-  width: fit-content;
-  padding: 1rem 0 0;
+.activeIndicator {
+  position: absolute;
+  left: 2rem;
+  width: 4px;
+  background: #ff9f2d;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: top center;
 }
 
-@media (min-width: 768px) {
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  text-align: left;
+  min-height: 80px;
+  overflow: hidden;
+}
+
+.tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 159, 45, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.tab:hover::before {
+  left: 100%;
+}
+
+.tab:hover {
+  background: rgba(255, 159, 45, 0.1);
+  border-color: rgba(255, 159, 45, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 159, 45, 0.2);
+}
+
+.tab.active {
+  background: rgba(255, 159, 45, 0.15);
+  border-color: currentColor;
+  box-shadow: 0 8px 25px rgba(255, 159, 45, 0.3);
+}
+
+.tabContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.company {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.period {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.tabDot {
+  position: absolute;
+  left: -1.25rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff9f2d;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(255, 159, 45, 0.5);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.tab.active .tabDot {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(255, 159, 45, 0.8);
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .tab {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .tab:hover {
+  background: rgba(255, 159, 45, 0.1);
+  border-color: rgba(255, 159, 45, 0.3);
+}
+
+[data-theme='dark'] .tab.active {
+  background: rgba(255, 159, 45, 0.15);
+  border-color: currentColor;
+}
+
+[data-theme='dark'] .content {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .tabDot {
+  border-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
   .container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .timeline {
+    display: none;
+  }
+
+  .tabs {
+    min-width: auto;
+    padding-left: 0;
     flex-direction: row;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    gap: 0.75rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5rem 1rem;
+    margin: 0 -1rem;
+    scroll-snap-type: x mandatory;
   }
 
-  .tabPanel {
-    padding: 3rem 2rem 0;
+  .activeIndicator {
+    display: none;
   }
 
-  .container button {
-    padding: 2rem 1.5rem;
+  .tab {
+    min-width: 220px;
+    min-height: 70px;
+    padding: 0.75rem 1rem;
+    flex-shrink: 0;
+    scroll-snap-align: start;
   }
+
+  .tabDot {
+    display: none;
+  }
+
+  .company {
+    font-size: 1rem;
+  }
+
+  .period {
+    font-size: 0.8rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 1rem;
+  }
+
+  .tabs {
+    padding: 0.5rem 0.75rem;
+    margin: 0 -0.75rem;
+    gap: 0.5rem;
+  }
+
+  .tab {
+    min-width: 180px;
+    min-height: 60px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .company {
+    font-size: 0.9rem;
+  }
+
+  .period {
+    font-size: 0.75rem;
+  }
+
+  .content {
+    padding: 0.75rem;
+  }
+}
+
+.tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.tabs::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.tabs::-webkit-scrollbar-thumb {
+  background: rgba(255, 159, 45, 0.5);
+  border-radius: 2px;
+}
+
+.tabs::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 159, 45, 0.7);
+}
+
+.tab[data-tab] {
+  will-change: transform, opacity;
+}
+
+.content {
+  will-change: transform, opacity;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(255, 159, 45, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 159, 45, 0.6);
+  }
+}
+
+.tab.active .tabDot {
+  animation: glow 2s ease-in-out infinite;
+}
+
+[data-theme='dark'] .tabsContainer {
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .tabItem {
+  color: #ccc;
+}
+
+[data-theme='dark'] .tabItem.active {
+  color: #fff;
+}
+
+[data-theme='dark'] .tabItem:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .tabsTimeline {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .tabsTimeline::before {
+  background: linear-gradient(to bottom, rgba(255, 159, 45, 0.6), rgba(255, 159, 45, 0.8));
+}
+
+[data-theme='dark'] .tabPoint {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] .tabPoint.active {
+  background: rgba(255, 159, 45, 0.8);
+}
+
+@media (max-width: 768px) {
+  .tabsContainer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .tabsList {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    gap: 0.5rem;
+  }
+
+  .tabItem {
+    min-width: 120px;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  .tabsTimeline {
+    display: none;
+  }
+
+  .tabsContent {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabsList {
+    gap: 0.25rem;
+  }
+
+  .tabItem {
+    min-width: 100px;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+.tabsList {
+  scroll-behavior: smooth;
+}
+
+.tabItem {
+  scroll-snap-align: start;
+}
+
+.gsap-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.gsap-scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.gsap-slide-left {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 159, 45, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 159, 45, 0.6);
+  }
+}
+
+.tabPoint.active {
+  animation: glow 2s ease-in-out infinite;
 }

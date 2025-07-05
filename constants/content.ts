@@ -69,27 +69,27 @@ const SKILLS = [
     name: 'Cypress',
   },
   {
-    id: 0.1,
+    id: 0.11,
     name: 'Storybook',
   },
   {
-    id: 0.11,
+    id: 0.12,
     name: 'Keycloak',
   },
   {
-    id: 0.12,
+    id: 0.13,
     name: 'Bit.io',
   },
   {
-    id: 0.13,
+    id: 0.14,
     name: 'Sass',
   },
   {
-    id: 0.14,
+    id: 0.15,
     name: 'Sentry',
   },
   {
-    id: 0.15,
+    id: 0.16,
     name: 'CI/CD workflows',
   },
 ]
@@ -218,4 +218,7 @@ const EXPERIENCE = {
     },
   ],
 }
-export { ABOUT_ME, SKILLS, EXPERIENCE }
+
+const ACTIONS = EXPERIENCE.tasks.map((task) => task.actions)
+
+export { ABOUT_ME, SKILLS, EXPERIENCE, ACTIONS }

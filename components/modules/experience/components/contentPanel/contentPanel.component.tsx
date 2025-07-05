@@ -1,8 +1,6 @@
 import { CSSProperties } from 'react'
 import { useIntl } from 'react-intl'
-import { motion } from 'framer-motion'
 import { useTheme } from '@mui/material'
-import { MOTION_PROPS } from 'constants/motion'
 import { Message } from 'components/modules/projects/projects.model'
 import styles from './contentPanel.module.css'
 
@@ -22,21 +20,17 @@ export const ContentPanel = ({ title, actions, company, url }: Props) => {
   } as CSSProperties
   return (
     <div className={styles.container} style={customStyles}>
-      <motion.p className={styles.title}>
+      <p className={styles.title}>
         <a href={url} target="_blank">
           {company}
         </a>
         {intl.formatMessage(title)}
-      </motion.p>
+      </p>
       <ul className={styles.actions}>
         {actions.map(({ description, id }) => (
-          <motion.li
-            key={id}
-            className={styles.items}
-            {...MOTION_PROPS}
-            transition={{ duration: 0.4 + id }}>
+          <li key={id} className={styles.items}>
             {intl.formatMessage(description)}
-          </motion.li>
+          </li>
         ))}
       </ul>
     </div>

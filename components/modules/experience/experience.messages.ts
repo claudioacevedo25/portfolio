@@ -8,6 +8,24 @@ export const EXPERIENCE_MSN = {
     defaultMessage:
       'Discover my recent professional journey in this section where I showcase my work experiences and achievements.',
   },
+  periods: {
+    adsmurai: {
+      id: 'experience.periods.adsmurai',
+      defaultMessage: 'June 2023 - Present',
+    },
+    folcode: {
+      id: 'experience.periods.folcode',
+      defaultMessage: 'April 2022 - June 2023',
+    },
+    splight: {
+      id: 'experience.periods.splight',
+      defaultMessage: 'January 2022 - March 2022',
+    },
+    bitlogic: {
+      id: 'experience.periods.bitlogic',
+      defaultMessage: 'January 2021 - December 2021',
+    },
+  },
   tasks: {
     adsmurai: {
       title: {

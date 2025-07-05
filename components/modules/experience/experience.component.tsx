@@ -1,8 +1,6 @@
-import { motion } from 'framer-motion'
 import { useIntl } from 'react-intl'
-import { ExperienceTabs } from './components/tabs'
 import { EXPERIENCE } from 'constants/content'
-import { MOTION_PROPS } from 'constants/motion'
+import { ExperienceTabs } from './components/tabs'
 import styles from './experience.module.css'
 
 const { title, subtitle } = EXPERIENCE
@@ -10,16 +8,16 @@ const { title, subtitle } = EXPERIENCE
 export const Experience = () => {
   const intl = useIntl()
   return (
-    <section className={styles.container}>
-      <motion.h1 className={styles.title} {...MOTION_PROPS} animate={{ opacity: 1, scale: 1 }}>
+    <section className={styles.container} aria-labelledby="experience-title">
+      <h1 id="experience-title" className={styles.title}>
         {intl.formatMessage(title)}
-      </motion.h1>
-      <motion.p className={styles.subtitle} {...MOTION_PROPS} transition={{ duration: 0.65 }}>
-        {intl.formatMessage(subtitle)}
-      </motion.p>
-      <motion.div className={styles.tabContent} {...MOTION_PROPS} transition={{ duration: 0.7 }}>
+      </h1>
+
+      <p className={styles.subtitle}>{intl.formatMessage(subtitle)}</p>
+
+      <div className={styles.tabsContainer} role="region" aria-label="work-experience">
         <ExperienceTabs />
-      </motion.div>
+      </div>
     </section>
   )
 }
