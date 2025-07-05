@@ -9,6 +9,7 @@ import { Resume } from 'components/modules/resume'
 import { PAGES } from 'constants/pages'
 import { MOTION_PROPS } from 'constants/motion'
 import styles from './layout.module.css'
+import { Chatbot } from 'components/atoms/chatbot'
 
 type Props = {
   children: React.ReactNode
@@ -49,6 +50,7 @@ export const Layout = ({ children }: Props) => {
         </motion.div>
       </main>
       <Footer />
+      <Chatbot />
     </>
   )
 }

@@ -1,0 +1,38 @@
+.floatingButton {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+}
+
+.chatWidget {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  width: 380px;
+  height: 500px;
+  z-index: 999;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .chatWidget {
+    bottom: 100px;
+    right: 16px;
+    left: 16px;
+    width: auto;
+    height: 400px;
+  }
+
+  .floatingButton {
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatWidget {
+    bottom: 80px;
+    height: 350px;
+  }
+}

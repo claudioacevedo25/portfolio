@@ -46,5 +46,23 @@
   "projects.own.description": "Mi propio sitio web.",
   "projects.ichoose.description": "Modelo de Inteligencia Artificial. Experimental. En construcción.",
   "projects.pokedex.description": "Un listado de pokemons con el detalle de cada uno de ellos.",
-  "projects.podcast.description": "Un listado de podcast con el detalle de cada uno de ellos."
+  "projects.podcast.description": "Un listado de podcast con el detalle de cada uno de ellos.",
+
+  "chatbot.header.title": "Asistente Virtual",
+  "chatbot.header.status": "Siempre disponible",
+  "chatbot.messages.welcome": "¡Hola! 👋 Soy el asistente virtual de Maximiliano. ¿En qué puedo ayudarte hoy?",
+  "chatbot.messages.typing": "Escribiendo...",
+  "chatbot.messages.defaultResponse": "Gracias por tu pregunta. Para consultas específicas, te recomiendo contactarme directamente a través de mi email o LinkedIn. ¡Estoy aquí para ayudarte!",
+  "chatbot.quickResponses.label": "Preguntas frecuentes:",
+  "chatbot.quickResponses.technologies.question": "¿En qué tecnologías trabajas?",
+  "chatbot.quickResponses.technologies.answer": "Trabajo principalmente con React, Next.js, TypeScript, Material UI, Node.js y bases de datos como PostgreSQL. También tengo experiencia con herramientas como Vercel, Git, y metodologías ágiles.",
+  "chatbot.quickResponses.resume.question": "¿Puedes enviarme tu CV?",
+  "chatbot.quickResponses.resume.answer": "¡Por supuesto! Puedes descargar mi CV actualizado desde la sección 'Resume' de mi portfolio.",
+  "chatbot.quickResponses.experience.question": "¿Cuál es tu experiencia?",
+  "chatbot.quickResponses.experience.answer": "Tengo más de 5 años de experiencia en desarrollo frontend, trabajando en proyectos desde landing pages hasta aplicaciones web complejas. He trabajado tanto en proyectos freelance como en empresas.",
+  "chatbot.quickResponses.freelance.question": "¿Haces proyectos freelance?",
+  "chatbot.quickResponses.freelance.answer": "Sí, estoy disponible para proyectos freelance. Me especializo en desarrollo frontend con React y frameworks modernos. Puedes contactarme a través de mi email o LinkedIn para discutir tu proyecto.",
+  "chatbot.quickResponses.contact.question": "¿Cómo puedo contactarte?",
+  "chatbot.quickResponses.contact.answer": "Puedes contactarme a través de mi email: claudioacevedo25@gmail.com o conectar conmigo en LinkedIn. También puedes seguirme en GitHub para ver mis proyectos más recientes.",
+  "chatbot.input.placeholder": "Escribe tu pregunta..."
 }

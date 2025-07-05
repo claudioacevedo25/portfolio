@@ -46,5 +46,23 @@
   "projects.own.description": "My own web site.",
   "projects.ichoose.description": "An AI model. Experimental. Under Construction.",
   "projects.pokedex.description": "List of pokemons with detail od each one.",
-  "projects.podcast.description": "List of podcast with detail od each one."
+  "projects.podcast.description": "List of podcast with detail od each one.",
+
+  "chatbot.header.title": "Virtual Assistant",
+  "chatbot.header.status": "Always available",
+  "chatbot.messages.welcome": "Hello! 👋 I am Maximiliano's virtual assistant. How can I help you today?",
+  "chatbot.messages.typing": "Typing...",
+  "chatbot.messages.defaultResponse": "Thank you for your question. For specific queries, I recommend contacting me directly through my email or LinkedIn. I'm here to help you!",
+  "chatbot.quickResponses.label": "Frequently asked questions:",
+  "chatbot.quickResponses.technologies.question": "What technologies do you work with?",
+  "chatbot.quickResponses.technologies.answer": "I mainly work with React, Next.js, TypeScript, Material UI, Node.js and databases like PostgreSQL. I also have experience with tools like Vercel, Git, and agile methodologies.",
+  "chatbot.quickResponses.resume.question": "Can you send me your resume?",
+  "chatbot.quickResponses.resume.answer": "Of course! You can download my updated resume from the 'Resume' section of my portfolio.",
+  "chatbot.quickResponses.experience.question": "What is your experience?",
+  "chatbot.quickResponses.experience.answer": "I have over 5 years of frontend development experience, working on projects from landing pages to complex web applications. I have worked on both freelance projects and for companies.",
+  "chatbot.quickResponses.freelance.question": "Do you do freelance projects?",
+  "chatbot.quickResponses.freelance.answer": "Yes, I am available for freelance projects. I specialize in frontend development with React and modern frameworks. You can contact me through my email or LinkedIn to discuss your project.",
+  "chatbot.quickResponses.contact.question": "How can I contact you?",
+  "chatbot.quickResponses.contact.answer": "You can contact me through my email: claudioacevedo25@gmail.com or connect with me on LinkedIn. You can also follow me on GitHub to see my latest projects.",
+  "chatbot.input.placeholder": "Type your question..."
 }
