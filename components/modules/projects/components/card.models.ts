@@ -47,32 +47,32 @@ export interface TechnologyStackProps {
 }
 
 export interface ProjectHeaderProps {
-  name: string
-  projectType: ProjectType
+  title: string
+  type: ProjectType
+  typeConfig: ProjectTypeConfig
 }
 
 export interface ActionButtonProps {
   href: string
-  target: string
-  ariaLabel: string
-  color: string
-  children: ReactNode
+  icon: React.ComponentType
+  label: string
+  palette: MaterialUIPalette
 }
 
 export interface ProjectActionsProps {
-  name: string
-  urls: Pick<ProjectUrls, 'site' | 'github'>
+  urls: ProjectUrls
   palette: MaterialUIPalette
 }
 
 export interface FeaturedBadgeProps {
-  palette: MaterialUIPalette
+  isFeatured?: boolean
 }
 
 export type ProjectTypeConfigMap = Record<ProjectType, ProjectTypeConfig>
 export type TechColorMap = Record<string, TechColorConfig>
 
 export interface ChipStylesReturn {
-  borderColor: string
-  color: string
+  borderColor?: string
+  color?: string
+  backgroundColor?: string
 }

@@ -1,1 +1,1 @@
-export { CustomCard as Card } from './card.component'
+export { ProjectCard as Card } from './card.component'

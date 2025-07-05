@@ -1,26 +1,88 @@
-import { ProjectTypeConfigMap, TechColorMap } from './card.models'
-
-export const PROJECT_TYPE_CONFIG: ProjectTypeConfigMap = {
-  freelance: { color: '#FF6B35', label: 'Freelance' },
-  personal: { color: '#4CAF50', label: 'Personal' },
-  collaborative: { color: '#2196F3', label: 'Collaborative' },
+export const PROJECT_TYPE_CONFIG = {
+  freelance: {
+    label: 'Freelance',
+    color: '#ff9f2d',
+  },
+  personal: {
+    label: 'Personal',
+    color: '#4CAF50',
+  },
+  collaborative: {
+    label: 'Colaborativo',
+    color: '#2196F3',
+  },
 } as const
 
-export const TECH_COLOR_MAP: TechColorMap = {
-  '#61DAFB': { light: '#1976d2', dark: '#61DAFB' }, // React
-  '#000000': { light: '#1976d2', dark: '#ffffff' }, // Next.js/Negro
-  '#3178C6': { light: '#1565c0', dark: '#42a5f5' }, // TypeScript
-  '#007FFF': { light: '#1976d2', dark: '#64b5f6' }, // Material UI
-  '#1572B6': { light: '#1565c0', dark: '#42a5f5' }, // CSS
-  '#412991': { light: '#673ab7', dark: '#9c27b0' }, // OpenAI
-  '#FFCA28': { light: '#f57c00', dark: '#ffb74d' }, // Firebase
-  '#06B6D4': { light: '#0288d1', dark: '#4fc3f7' }, // SWR/Tailwind
-  '#339933': { light: '#2e7d32', dark: '#66bb6a' }, // Node.js
+export const TECH_COLOR_MAP = {
+  blue: {
+    light: '#2196F3',
+    dark: '#64B5F6',
+  },
+  green: {
+    light: '#4CAF50',
+    dark: '#81C784',
+  },
+  orange: {
+    light: '#ff9f2d',
+    dark: '#FFB74D',
+  },
+  red: {
+    light: '#F44336',
+    dark: '#E57373',
+  },
+  purple: {
+    light: '#9C27B0',
+    dark: '#BA68C8',
+  },
+  cyan: {
+    light: '#00BCD4',
+    dark: '#4DD0E1',
+  },
+  pink: {
+    light: '#E91E63',
+    dark: '#F06292',
+  },
+  yellow: {
+    light: '#FFC107',
+    dark: '#FFD54F',
+  },
+  indigo: {
+    light: '#3F51B5',
+    dark: '#7986CB',
+  },
+  teal: {
+    light: '#009688',
+    dark: '#4DB6AC',
+  },
+  lime: {
+    light: '#8BC34A',
+    dark: '#AED581',
+  },
+  amber: {
+    light: '#FFC107',
+    dark: '#FFCC02',
+  },
+  'deep-orange': {
+    light: '#FF5722',
+    dark: '#FF8A65',
+  },
+  'deep-purple': {
+    light: '#673AB7',
+    dark: '#9575CD',
+  },
+  'light-blue': {
+    light: '#03A9F4',
+    dark: '#4FC3F7',
+  },
+  'light-green': {
+    light: '#8BC34A',
+    dark: '#AED581',
+  },
 } as const
 
 export const DEFAULT_PROJECT_CONFIG = {
-  color: '#9E9E9E',
-  label: 'Project',
+  label: 'Proyecto',
+  color: '#757575',
 } as const
 
-export const MAX_VISIBLE_TECHNOLOGIES = 4 as const
+export const MAX_VISIBLE_TECHNOLOGIES = 5 as const

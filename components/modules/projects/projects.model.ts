@@ -5,7 +5,7 @@ export type CardProps = {
   description: Message
   technologies: Technology[]
   projectType: ProjectType
-  featured?: boolean
+  featured: boolean
 }
 
 export type Message = {
