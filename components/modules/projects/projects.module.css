@@ -1,18 +1,34 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 0 2rem 1rem;
+  align-items: center;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
   gap: 1rem;
 }
 
 .title {
-  margin-bottom: 1rem;
-  font-weight: 400;
-  line-height: 1.334;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #ff9f2d;
+  opacity: 1;
+  background: linear-gradient(135deg, #ff9f2d 0%, #ffa726 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .subtitle {
-  font-size: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  text-align: center;
+  opacity: 0.8;
+  max-width: 600px;
+  color: inherit;
 }
 
 .cardContainer {
@@ -22,17 +38,34 @@
   gap: 1.5rem;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .container {
-    padding: 0 6rem;
+    padding: 3rem 1rem;
   }
 
   .title {
-    font-size: 3rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cardContainer {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 4rem 6rem;
   }
 
   .cardContainer {
     flex-direction: row;
+    margin-top: 2rem;
   }
 
   .card {
@@ -43,6 +76,6 @@
 
 @media (min-width: 1080px) {
   .container {
-    padding: 0 12rem;
+    padding: 4rem 12rem;
   }
 }

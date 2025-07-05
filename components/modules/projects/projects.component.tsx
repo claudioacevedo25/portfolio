@@ -1,58 +1,134 @@
-import { motion } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 import { useIntl } from 'react-intl'
-import { STAGGER_CONTAINER, STAGGER_ITEM } from 'constants/motion'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import styles from './projects.module.css'
 import { PROJECTS } from 'constants/projects'
 import { Card } from './components'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const { projects, title, subtitle } = PROJECTS
 const OWN_PROJECT_ID = 2
 
 export const Projects = () => {
   const intl = useIntl()
+  const containerRef = useRef<HTMLElement>(null)
+  const titleRef = useRef<HTMLHeadingElement>(null)
+  const subtitleRef = useRef<HTMLParagraphElement>(null)
+  const cardContainerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (titleRef.current) {
+        gsap.set(titleRef.current, { opacity: 1 })
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: titleRef.current,
+            start: 'top 90%',
+            toggleActions: 'play none none reverse',
+          },
+        })
+
+        tl.fromTo(
+          titleRef.current,
+          {
+            y: 30,
+            scale: 0.9,
+          },
+          {
+            y: 0,
+            scale: 1,
+            duration: 0.6,
+            ease: 'power3.out',
+          },
+        )
+      }
+
+      if (subtitleRef.current) {
+        // Asegurar que el subtítulo sea visible desde el principio
+        gsap.set(subtitleRef.current, { opacity: 1 })
+
+        gsap.fromTo(
+          subtitleRef.current,
+          {
+            y: 20,
+          },
+          {
+            y: 0,
+            duration: 0.4,
+            delay: 0.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: subtitleRef.current,
+              start: 'top 90%',
+              toggleActions: 'play none none reverse',
+            },
+          },
+        )
+      }
+
+      if (cardContainerRef.current) {
+        const cards = cardContainerRef.current.querySelectorAll('.projects_card__pQcPB')
+
+        gsap.fromTo(
+          cards,
+          {
+            opacity: 0,
+            y: 80,
+            scale: 0.8,
+            rotation: 5,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            rotation: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: 'back.out(1.7)',
+            scrollTrigger: {
+              trigger: cardContainerRef.current,
+              start: 'top 70%',
+              toggleActions: 'play none none reverse',
+            },
+          },
+        )
+      }
+    }, containerRef)
+
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <section className={styles.container} aria-labelledby="projects-title">
-      <motion.h1
-        id="projects-title"
-        className={styles.title}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}>
+    <section ref={containerRef} className={styles.container} aria-labelledby="projects-title">
+      <h1 ref={titleRef} id="projects-title" className={styles.title}>
         {intl.formatMessage(title)}
-      </motion.h1>
+      </h1>
 
-      <motion.p
-        className={styles.subtitle}
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6, delay: 0.2, ease: [0.6, -0.05, 0.01, 0.99] }}>
+      <p ref={subtitleRef} className={styles.subtitle}>
         {intl.formatMessage(subtitle)}
-      </motion.p>
+      </p>
 
-      <motion.div
+      <div
+        ref={cardContainerRef}
         className={styles.cardContainer}
-        variants={STAGGER_CONTAINER}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true, amount: 0.1 }}
         role="region"
         aria-label="projects-list">
         {projects.map((project) => {
           if (project.id === OWN_PROJECT_ID) return null
           return (
-            <motion.div
+            <div
               key={project.id}
               className={styles.card}
-              variants={STAGGER_ITEM}
               role="article"
               aria-labelledby={`project-${project.id}-title`}>
               <Card {...project} />
-            </motion.div>
+            </div>
           )
         })}
-      </motion.div>
+      </div>
     </section>
   )
 }

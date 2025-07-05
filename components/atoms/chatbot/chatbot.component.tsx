@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { gsap } from 'gsap'
 import {
   Box,
   Paper,
@@ -40,8 +40,58 @@ export const Chatbot = () => {
   const [inputValue, setInputValue] = useState('')
   const [isTyping, setIsTyping] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const floatingButtonRef = useRef<HTMLDivElement>(null)
+  const chatWidgetRef = useRef<HTMLDivElement>(null)
   const { palette } = useTheme()
   const intl = useIntl()
+
+  useEffect(() => {
+    if (floatingButtonRef.current) {
+      gsap.fromTo(
+        floatingButtonRef.current,
+        {
+          scale: 0,
+          opacity: 0,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.6,
+          delay: 1,
+          ease: 'back.out(1.7)',
+        },
+      )
+
+      gsap.to(floatingButtonRef.current, {
+        y: -2,
+        duration: 3,
+        ease: 'power2.inOut',
+        yoyo: true,
+        repeat: -1,
+      })
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isOpen && chatWidgetRef.current) {
+      gsap.fromTo(
+        chatWidgetRef.current,
+        {
+          scale: 0,
+          opacity: 0,
+          rotationY: 90,
+          transformOrigin: 'bottom right',
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          rotationY: 0,
+          duration: 0.5,
+          ease: 'back.out(1.7)',
+        },
+      )
+    }
+  }, [isOpen])
 
   const quickResponses: QuickResponse[] = [
     {
@@ -182,10 +232,7 @@ export const Chatbot = () => {
 
   return (
     <>
-      <motion.div
-        className={styles.floatingButton}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}>
+      <div ref={floatingButtonRef} className={styles.floatingButton}>
         <IconButton
           onClick={() => setIsOpen(!isOpen)}
           sx={{
@@ -201,179 +248,172 @@ export const Chatbot = () => {
           }}>
           {isOpen ? <CloseIcon /> : <ChatIcon />}
         </IconButton>
-      </motion.div>
+      </div>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.3 }}
-            className={styles.chatWidget}>
-            <Paper
-              elevation={8}
+      {isOpen && (
+        <div ref={chatWidgetRef} className={styles.chatWidget}>
+          <Paper
+            elevation={8}
+            sx={{
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              borderRadius: '16px',
+              overflow: 'hidden',
+            }}>
+            <Box
               sx={{
-                width: '100%',
-                height: '100%',
+                backgroundColor: palette.primary.main,
+                color: palette.mode === 'dark' ? '#000' : '#fff',
+                padding: '16px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 2,
+              }}>
+              <Avatar sx={{ bgcolor: 'rgba(255,255,255,0.2)' }}>
+                <SmartToyIcon />
+              </Avatar>
+              <Box>
+                <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                  {intl.formatMessage(CHATBOT_MSN.header.title)}
+                </Typography>
+                <Typography variant="caption" sx={{ opacity: 0.8 }}>
+                  {intl.formatMessage(CHATBOT_MSN.header.status)}
+                </Typography>
+              </Box>
+            </Box>
+
+            <Box
+              sx={{
+                flexGrow: 1,
+                padding: '16px',
+                overflowY: 'auto',
                 display: 'flex',
                 flexDirection: 'column',
-                borderRadius: '16px',
-                overflow: 'hidden',
+                gap: 2,
+                maxHeight: '300px',
               }}>
-              <Box
-                sx={{
-                  backgroundColor: palette.primary.main,
-                  color: palette.mode === 'dark' ? '#000' : '#fff',
-                  padding: '16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 2,
-                }}>
-                <Avatar sx={{ bgcolor: 'rgba(255,255,255,0.2)' }}>
-                  <SmartToyIcon />
-                </Avatar>
-                <Box>
-                  <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                    {intl.formatMessage(CHATBOT_MSN.header.title)}
-                  </Typography>
-                  <Typography variant="caption" sx={{ opacity: 0.8 }}>
-                    {intl.formatMessage(CHATBOT_MSN.header.status)}
-                  </Typography>
-                </Box>
-              </Box>
-
-              <Box
-                sx={{
-                  flexGrow: 1,
-                  padding: '16px',
-                  overflowY: 'auto',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 2,
-                  maxHeight: '300px',
-                }}>
-                {messages.map((message) => (
-                  <Box
-                    key={message.id}
-                    sx={{
-                      display: 'flex',
-                      justifyContent: message.isUser ? 'flex-end' : 'flex-start',
-                      alignItems: 'flex-end',
-                      gap: 1,
-                    }}>
-                    {!message.isUser && (
-                      <Avatar sx={{ width: 32, height: 32 }}>
-                        <SmartToyIcon sx={{ fontSize: 16 }} />
-                      </Avatar>
-                    )}
-                    <Paper
-                      elevation={1}
-                      sx={{
-                        padding: '8px 12px',
-                        maxWidth: '70%',
-                        backgroundColor: message.isUser
-                          ? palette.primary.main
-                          : palette.background.paper,
-                        color: message.isUser
-                          ? palette.mode === 'dark'
-                            ? '#000'
-                            : '#fff'
-                          : palette.text.primary,
-                        borderRadius: message.isUser ? '16px 16px 4px 16px' : '16px 16px 16px 4px',
-                      }}>
-                      <Typography variant="body2" sx={{ lineHeight: 1.4 }}>
-                        {message.text}
-                      </Typography>
-                    </Paper>
-                    {message.isUser && (
-                      <Avatar sx={{ width: 32, height: 32 }}>
-                        <PersonIcon sx={{ fontSize: 16 }} />
-                      </Avatar>
-                    )}
-                  </Box>
-                ))}
-
-                {isTyping && (
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              {messages.map((message) => (
+                <Box
+                  key={message.id}
+                  sx={{
+                    display: 'flex',
+                    justifyContent: message.isUser ? 'flex-end' : 'flex-start',
+                    alignItems: 'flex-end',
+                    gap: 1,
+                  }}>
+                  {!message.isUser && (
                     <Avatar sx={{ width: 32, height: 32 }}>
                       <SmartToyIcon sx={{ fontSize: 16 }} />
                     </Avatar>
-                    <Paper
-                      elevation={1}
-                      sx={{
-                        padding: '8px 12px',
-                        backgroundColor: palette.background.paper,
-                        borderRadius: '16px 16px 16px 4px',
-                      }}>
-                      <Typography variant="body2" sx={{ opacity: 0.7 }}>
-                        {intl.formatMessage(CHATBOT_MSN.messages.typing)}
-                      </Typography>
-                    </Paper>
-                  </Box>
-                )}
-                <div ref={messagesEndRef} />
-              </Box>
-
-              <Box sx={{ padding: '8px 16px' }}>
-                <Typography variant="caption" sx={{ opacity: 0.7, display: 'block', mb: 1 }}>
-                  {intl.formatMessage(CHATBOT_MSN.quickResponses.label)}
-                </Typography>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                  {quickResponses.slice(0, 3).map((response) => (
-                    <Chip
-                      key={response.id}
-                      label={intl.formatMessage(response.question)}
-                      size="small"
-                      onClick={() => handleQuickResponse(response)}
-                      sx={{
-                        cursor: 'pointer',
-                        '&:hover': {
-                          backgroundColor: `${palette.primary.main}20`,
-                        },
-                      }}
-                    />
-                  ))}
+                  )}
+                  <Paper
+                    elevation={1}
+                    sx={{
+                      padding: '8px 12px',
+                      maxWidth: '70%',
+                      backgroundColor: message.isUser
+                        ? palette.primary.main
+                        : palette.background.paper,
+                      color: message.isUser
+                        ? palette.mode === 'dark'
+                          ? '#000'
+                          : '#fff'
+                        : palette.text.primary,
+                      borderRadius: message.isUser ? '16px 16px 4px 16px' : '16px 16px 16px 4px',
+                    }}>
+                    <Typography variant="body2" sx={{ lineHeight: 1.4 }}>
+                      {message.text}
+                    </Typography>
+                  </Paper>
+                  {message.isUser && (
+                    <Avatar sx={{ width: 32, height: 32 }}>
+                      <PersonIcon sx={{ fontSize: 16 }} />
+                    </Avatar>
+                  )}
                 </Box>
+              ))}
+
+              {isTyping && (
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <Avatar sx={{ width: 32, height: 32 }}>
+                    <SmartToyIcon sx={{ fontSize: 16 }} />
+                  </Avatar>
+                  <Paper
+                    elevation={1}
+                    sx={{
+                      padding: '8px 12px',
+                      backgroundColor: palette.background.paper,
+                      borderRadius: '16px 16px 16px 4px',
+                    }}>
+                    <Typography variant="body2" sx={{ opacity: 0.7 }}>
+                      {intl.formatMessage(CHATBOT_MSN.messages.typing)}
+                    </Typography>
+                  </Paper>
+                </Box>
+              )}
+              <div ref={messagesEndRef} />
+            </Box>
+
+            <Box sx={{ padding: '8px 16px' }}>
+              <Typography variant="caption" sx={{ opacity: 0.7, display: 'block', mb: 1 }}>
+                {intl.formatMessage(CHATBOT_MSN.quickResponses.label)}
+              </Typography>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                {quickResponses.slice(0, 3).map((response) => (
+                  <Chip
+                    key={response.id}
+                    label={intl.formatMessage(response.question)}
+                    size="small"
+                    onClick={() => handleQuickResponse(response)}
+                    sx={{
+                      cursor: 'pointer',
+                      '&:hover': {
+                        backgroundColor: `${palette.primary.main}20`,
+                      },
+                    }}
+                  />
+                ))}
               </Box>
+            </Box>
 
-              <Divider />
+            <Divider />
 
-              <Box sx={{ padding: '16px', display: 'flex', gap: 1 }}>
-                <TextField
-                  fullWidth
-                  size="small"
-                  placeholder={intl.formatMessage(CHATBOT_MSN.input.placeholder)}
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                  sx={{
-                    '& .MuiOutlinedInput-root': {
-                      borderRadius: '20px',
-                    },
-                  }}
-                />
-                <IconButton
-                  onClick={handleSendMessage}
-                  disabled={!inputValue.trim()}
-                  sx={{
+            <Box sx={{ padding: '16px', display: 'flex', gap: 1 }}>
+              <TextField
+                fullWidth
+                size="small"
+                placeholder={intl.formatMessage(CHATBOT_MSN.input.placeholder)}
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyPress={handleKeyPress}
+                sx={{
+                  '& .MuiOutlinedInput-root': {
+                    borderRadius: '20px',
+                  },
+                }}
+              />
+              <IconButton
+                onClick={handleSendMessage}
+                disabled={!inputValue.trim()}
+                sx={{
+                  backgroundColor: palette.primary.main,
+                  color: palette.mode === 'dark' ? '#000' : '#fff',
+                  '&:hover': {
                     backgroundColor: palette.primary.main,
-                    color: palette.mode === 'dark' ? '#000' : '#fff',
-                    '&:hover': {
-                      backgroundColor: palette.primary.main,
-                      filter: 'brightness(1.1)',
-                    },
-                    '&:disabled': {
-                      backgroundColor: palette.action.disabled,
-                    },
-                  }}>
-                  <SendIcon />
-                </IconButton>
-              </Box>
-            </Paper>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                    filter: 'brightness(1.1)',
+                  },
+                  '&:disabled': {
+                    backgroundColor: palette.action.disabled,
+                  },
+                }}>
+                <SendIcon />
+              </IconButton>
+            </Box>
+          </Paper>
+        </div>
+      )}
     </>
   )
 }
