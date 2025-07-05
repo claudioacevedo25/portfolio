@@ -194,6 +194,20 @@ export const About = () => {
         repeat: -1,
       })
 
+      if (window.innerWidth >= 1024) {
+        gsap.to(imageRef.current, {
+          y: () => window.innerHeight * 0.1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            scrub: 0.3,
+            invalidateOnRefresh: true,
+          },
+        })
+      }
+
       const handleMouseMove = (e: MouseEvent) => {
         const { clientX, clientY } = e
         const x = (clientX / window.innerWidth - 0.5) * 20
@@ -201,7 +215,7 @@ export const About = () => {
 
         gsap.to(imageRef.current, {
           x: x,
-          y: y + -10, // Add floating offset
+          y: y + -10,
           duration: 0.5,
           ease: 'power2.out',
         })
