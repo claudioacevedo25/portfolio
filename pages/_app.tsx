@@ -8,7 +8,7 @@ import { Spinner } from 'components/atoms/spinner'
 import { Context } from 'components/molecules/context'
 import 'styles/globals.css'
 
-const DELAY = 3000
+const DELAY = 2000
 
 export default function App({ Component, pageProps }: AppProps) {
   const [animation, setAnimation] = useState(true)
