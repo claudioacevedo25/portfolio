@@ -52,6 +52,7 @@
   text-align: left;
   min-height: 80px;
   overflow: hidden;
+  will-change: transform, opacity;
 }
 
 .tab::before {
@@ -116,6 +117,7 @@
 .tab.active .tabDot {
   transform: scale(1.2);
   box-shadow: 0 0 15px rgba(255, 159, 45, 0.8);
+  animation: glow 2s ease-in-out infinite;
 }
 
 .content {
@@ -126,6 +128,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  will-change: transform, opacity;
 }
 
 [data-theme='dark'] .tab {
@@ -152,6 +155,49 @@
   border-color: rgba(0, 0, 0, 0.8);
 }
 
+.tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.tabs::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.tabs::-webkit-scrollbar-thumb {
+  background: rgba(255, 159, 45, 0.5);
+  border-radius: 2px;
+}
+
+.tabs::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 159, 45, 0.7);
+}
+
+.gsap-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.gsap-scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.gsap-slide-left {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 159, 45, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 159, 45, 0.6);
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -163,17 +209,14 @@
   }
 
   .tabs {
-    min-width: auto;
-    padding-left: 0;
     flex-direction: row;
     overflow-x: auto;
-    scrollbar-width: thin;
-    gap: 0.75rem;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
     padding: 0.5rem 1rem;
-    margin: 0 -1rem;
+    margin: 0;
+    gap: 0.75rem;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    min-width: auto;
   }
 
   .activeIndicator {
@@ -212,7 +255,7 @@
 
   .tabs {
     padding: 0.5rem 0.75rem;
-    margin: 0 -0.75rem;
+    margin: 0;
     gap: 0.5rem;
   }
 
@@ -233,156 +276,4 @@
   .content {
     padding: 0.75rem;
   }
-}
-
-.tabs::-webkit-scrollbar {
-  height: 4px;
-}
-
-.tabs::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-}
-
-.tabs::-webkit-scrollbar-thumb {
-  background: rgba(255, 159, 45, 0.5);
-  border-radius: 2px;
-}
-
-.tabs::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 159, 45, 0.7);
-}
-
-.tab[data-tab] {
-  will-change: transform, opacity;
-}
-
-.content {
-  will-change: transform, opacity;
-}
-
-@keyframes glow {
-  0%,
-  100% {
-    box-shadow: 0 0 5px rgba(255, 159, 45, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(255, 159, 45, 0.6);
-  }
-}
-
-.tab.active .tabDot {
-  animation: glow 2s ease-in-out infinite;
-}
-
-[data-theme='dark'] .tabsContainer {
-  background: linear-gradient(145deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-[data-theme='dark'] .tabItem {
-  color: #ccc;
-}
-
-[data-theme='dark'] .tabItem.active {
-  color: #fff;
-}
-
-[data-theme='dark'] .tabItem:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-[data-theme='dark'] .tabsTimeline {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-[data-theme='dark'] .tabsTimeline::before {
-  background: linear-gradient(to bottom, rgba(255, 159, 45, 0.6), rgba(255, 159, 45, 0.8));
-}
-
-[data-theme='dark'] .tabPoint {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-[data-theme='dark'] .tabPoint.active {
-  background: rgba(255, 159, 45, 0.8);
-}
-
-@media (max-width: 768px) {
-  .tabsContainer {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .tabsList {
-    flex-direction: row;
-    overflow-x: auto;
-    padding: 0.5rem 0;
-    gap: 0.5rem;
-  }
-
-  .tabItem {
-    min-width: 120px;
-    padding: 0.5rem 0.75rem;
-    text-align: center;
-    font-size: 0.85rem;
-  }
-
-  .tabsTimeline {
-    display: none;
-  }
-
-  .tabsContent {
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .tabsList {
-    gap: 0.25rem;
-  }
-
-  .tabItem {
-    min-width: 100px;
-    padding: 0.4rem 0.5rem;
-    font-size: 0.8rem;
-  }
-}
-
-.tabsList {
-  scroll-behavior: smooth;
-}
-
-.tabItem {
-  scroll-snap-align: start;
-}
-
-.gsap-fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.gsap-scale-in {
-  opacity: 0;
-  transform: scale(0.8);
-}
-
-.gsap-slide-left {
-  transform: translateX(-20px);
-  opacity: 0;
-}
-
-@keyframes glow {
-  0%,
-  100% {
-    box-shadow: 0 0 10px rgba(255, 159, 45, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 25px rgba(255, 159, 45, 0.6);
-  }
-}
-
-.tabPoint.active {
-  animation: glow 2s ease-in-out infinite;
 }

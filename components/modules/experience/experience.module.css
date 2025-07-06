@@ -2,16 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 3rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
   background: linear-gradient(135deg, #ff9f2d 0%, #ffa726 100%);
   -webkit-background-clip: text;
@@ -20,46 +20,51 @@
 }
 
 .subtitle {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
   opacity: 0.8;
-  max-width: 600px;
+  max-width: 90vw;
 }
 
 .tabsContainer {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  overflow-x: auto;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 3rem 1rem;
+    margin: 0;
+    padding: 2rem 1rem;
   }
 
   .title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.75rem;
   }
 
   .subtitle {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .tabsContainer {
-    margin-top: 1rem;
+    font-size: 0.95rem;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    padding: 0 6rem;
+    padding: 3rem 4rem;
   }
 
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .tabsContainer {
+    margin-top: 2rem;
   }
 }
 
