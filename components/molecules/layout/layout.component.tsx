@@ -32,7 +32,6 @@ export const Layout = ({ children }: Props) => {
       if (sectionsRef.current) {
         const buttons = sectionsRef.current.querySelectorAll('button')
 
-        // Animación de entrada más simple sin ScrollTrigger
         gsap.fromTo(
           buttons,
           {

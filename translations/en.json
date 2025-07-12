@@ -54,6 +54,7 @@
   "projects.ichoose.description": "An AI model. Experimental. Under Construction.",
   "projects.pokedex.description": "List of pokemons with detail od each one.",
   "projects.podcast.description": "List of podcast with detail od each one.",
+  "projects.priceHawk.description": "Price tracker for products with price history.",
 
   "chatbot.header.title": "Virtual Assistant",
   "chatbot.header.status": "Always available",

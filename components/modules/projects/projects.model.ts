@@ -36,4 +36,5 @@ export type Project = {
   technologies: Technology[]
   projectType: ProjectType
   featured: boolean
+  isHidden?: boolean
 }

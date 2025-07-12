@@ -54,6 +54,7 @@ const PROJECTS = {
       description: PROJECTS_MSN.projects.travel,
       projectType: 'freelance',
       featured: false,
+      isHidden: true,
       technologies: [
         {
           id: 0,
@@ -92,6 +93,7 @@ const PROJECTS = {
       description: PROJECTS_MSN.projects.own,
       projectType: 'personal',
       featured: false,
+      isHidden: true,
       technologies: [
         {
           id: 0,
@@ -230,6 +232,44 @@ const PROJECTS = {
           name: 'SWR',
           icon: '🔄',
           color: '#06B6D4',
+        },
+      ],
+    },
+    {
+      id: 6,
+      name: 'Price Hawk',
+      urls: {
+        picture: '/price-hawk.webp',
+        site: 'https://www.price-hawk.xyz',
+        github: 'https://github.com/claudioacevedo25/price-hawk-client',
+      },
+      description: PROJECTS_MSN.projects.priceHawk,
+      projectType: 'freelance',
+      featured: true,
+      technologies: [
+        {
+          id: 0,
+          name: 'Supabase',
+          icon: '🟢',
+          color: '#61DAFB',
+        },
+        {
+          id: 1,
+          name: 'Vite',
+          icon: '⚡',
+          color: '#000000',
+        },
+        {
+          id: 3,
+          name: 'Nest JS',
+          icon: '🕸️',
+          color: '#06B6D4',
+        },
+        {
+          id: 4,
+          name: 'Shadcn UI',
+          icon: '🎨',
+          color: '#F97316',
         },
       ],
     },

@@ -9,7 +9,6 @@ import { Card } from './components'
 gsap.registerPlugin(ScrollTrigger)
 
 const { projects, title, subtitle } = PROJECTS
-const OWN_PROJECT_ID = 2
 
 export const Projects = () => {
   const intl = useIntl()
@@ -47,7 +46,6 @@ export const Projects = () => {
       }
 
       if (subtitleRef.current) {
-        // Asegurar que el subtítulo sea visible desde el principio
         gsap.set(subtitleRef.current, { opacity: 1 })
 
         gsap.fromTo(
@@ -117,7 +115,7 @@ export const Projects = () => {
         role="region"
         aria-label="projects-list">
         {projects.map((project) => {
-          if (project.id === OWN_PROJECT_ID) return null
+          if (project.isHidden) return null
           return (
             <div
               key={project.id}

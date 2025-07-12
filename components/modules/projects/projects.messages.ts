@@ -36,5 +36,9 @@ export const PROJECTS_MSN = {
       id: 'projects.podcast.description',
       defaultMessage: 'List of podcast with detail od each one.',
     },
+    priceHawk: {
+      id: 'projects.priceHawk.description',
+      defaultMessage: 'Price tracker for products with price history.',
+    },
   },
 }
