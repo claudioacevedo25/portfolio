@@ -8,6 +8,7 @@ import { Language } from 'components/atoms/selectLang/selectLang.component'
 import { ContextProps } from './context.module'
 
 const inter = Inter({
+  subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
