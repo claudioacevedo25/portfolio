@@ -1,7 +1,10 @@
 import { CSSProperties } from 'react'
-import { useIntl } from 'react-intl'
+
 import { useTheme } from '@mui/material'
+import { useIntl } from 'react-intl'
+
 import { Message } from 'components/modules/projects/projects.model'
+
 import styles from './contentPanel.module.css'
 
 type Props = {

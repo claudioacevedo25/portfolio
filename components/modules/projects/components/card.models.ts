@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
+
 import { Theme } from '@mui/material/styles'
+
 import { ProjectType } from '../projects.model'
 
 export interface ProjectTypeConfig {

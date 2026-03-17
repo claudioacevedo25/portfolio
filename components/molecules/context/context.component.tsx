@@ -1,10 +1,13 @@
 import { useState, useMemo, createContext, useContext, useEffect } from 'react'
-import { Inter } from '@next/font/google'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
+
 import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import { Inter } from '@next/font/google'
 import { IntlProvider } from 'react-intl'
-import messages from 'translations'
+
 import { Language } from 'components/atoms/selectLang/selectLang.component'
+import messages from 'translations'
+
 import { ContextProps } from './context.module'
 
 const inter = Inter({

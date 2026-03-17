@@ -1,10 +1,12 @@
-import { useTheme } from '@mui/material'
-import { useIntl } from 'react-intl'
-import { useRouter } from 'next/router'
 import { useEffect, useRef, useState } from 'react'
+
+import { useTheme } from '@mui/material'
 import { gsap } from 'gsap'
-import { TextPlugin } from 'gsap/dist/TextPlugin'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { TextPlugin } from 'gsap/dist/TextPlugin'
+import { useRouter } from 'next/router'
+import { useIntl } from 'react-intl'
+
 import { HOME_MSN } from './home.messages'
 import styles from './home.module.css'
 
@@ -144,7 +146,7 @@ export const Home = () => {
     }, containerRef)
 
     return () => ctx.revert()
-  }, [intl, title])
+  }, [intl])
 
   return (
     <div className={styles.heroContainer} ref={containerRef}>

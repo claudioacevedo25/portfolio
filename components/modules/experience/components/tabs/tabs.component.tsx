@@ -1,9 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
-import { useIntl } from 'react-intl'
+
 import { useTheme } from '@mui/material'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { useIntl } from 'react-intl'
+
 import { EXPERIENCE } from 'constants/content'
+
 import { EXPERIENCE_MSN } from '../../experience.messages'
 import { ContentPanel } from '../contentPanel'
 import styles from './tabs.module.css'

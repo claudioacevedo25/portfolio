@@ -1,11 +1,13 @@
-import Head from 'next/head'
 import { useEffect, useState } from 'react'
-import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
+
 import { Analytics } from '@vercel/analytics/react'
-import { Layout } from 'components/molecules/layout'
+import type { AppProps } from 'next/app'
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+
 import { Spinner } from 'components/atoms/spinner'
 import { Context } from 'components/molecules/context'
+import { Layout } from 'components/molecules/layout'
 import 'styles/globals.css'
 
 const DELAY = 2000
