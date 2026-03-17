@@ -1,8 +1,11 @@
 import { createContext, useContext, useEffect, useRef } from 'react'
+
 import { useTheme } from '@mui/material/styles'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+
 import { SOCIAL_NETWORK } from 'constants/footer'
+
 import styles from './footer.module.css'
 
 gsap.registerPlugin(ScrollTrigger)

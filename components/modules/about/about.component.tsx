@@ -1,11 +1,14 @@
 import { CSSProperties, useEffect, useRef } from 'react'
-import Image from 'next/image'
-import { useIntl } from 'react-intl'
+
 import { useTheme } from '@mui/material'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { TextPlugin } from 'gsap/dist/TextPlugin'
+import Image from 'next/image'
+import { useIntl } from 'react-intl'
+
 import { ABOUT_ME, SKILLS } from 'constants/content'
+
 import styles from './about.module.css'
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin)

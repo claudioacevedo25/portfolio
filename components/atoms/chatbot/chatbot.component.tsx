@@ -1,5 +1,10 @@
 import { useState, useRef, useEffect } from 'react'
-import { gsap } from 'gsap'
+
+import ChatIcon from '@mui/icons-material/Chat'
+import CloseIcon from '@mui/icons-material/Close'
+import PersonIcon from '@mui/icons-material/Person'
+import SendIcon from '@mui/icons-material/Send'
+import SmartToyIcon from '@mui/icons-material/SmartToy'
 import {
   Box,
   Paper,
@@ -11,12 +16,9 @@ import {
   Avatar,
   useTheme,
 } from '@mui/material'
-import ChatIcon from '@mui/icons-material/Chat'
-import SendIcon from '@mui/icons-material/Send'
-import CloseIcon from '@mui/icons-material/Close'
-import SmartToyIcon from '@mui/icons-material/SmartToy'
-import PersonIcon from '@mui/icons-material/Person'
+import { gsap } from 'gsap'
 import { useIntl } from 'react-intl'
+
 import { CHATBOT_MSN } from './chatbot.messages'
 import styles from './chatbot.module.css'
 

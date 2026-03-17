@@ -1,15 +1,19 @@
 import { useEffect, useRef } from 'react'
+
 import { Button, Typography, useMediaQuery } from '@mui/material'
-import { useRouter } from 'next/router'
-import { useIntl } from 'react-intl'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import { Header } from '../header'
-import { Footer } from '../footer'
+import { useRouter } from 'next/router'
+import { useIntl } from 'react-intl'
+
+import { Chatbot } from 'components/atoms/chatbot'
 import { Resume } from 'components/modules/resume'
 import { PAGES } from 'constants/pages'
+
+import { Footer } from '../footer'
+import { Header } from '../header'
 import styles from './layout.module.css'
-import { Chatbot } from 'components/atoms/chatbot'
+
 
 gsap.registerPlugin(ScrollTrigger)
 

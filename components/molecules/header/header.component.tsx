@@ -1,11 +1,14 @@
 import { useEffect, useRef } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+
 import { useTheme } from '@mui/material/styles'
 import { gsap } from 'gsap'
-import { ThemeSwitch } from 'components/atoms/switch'
-import styles from './header.module.css'
+import Image from 'next/image'
+import Link from 'next/link'
+
 import { SelectLang } from 'components/atoms/selectLang'
+import { ThemeSwitch } from 'components/atoms/switch'
+
+import styles from './header.module.css'
 import { useAppContext } from '../context/context.component'
 
 export const Header = () => {

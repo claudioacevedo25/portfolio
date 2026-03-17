@@ -1,10 +1,14 @@
 import { useEffect, useRef } from 'react'
-import { useIntl } from 'react-intl'
+
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import styles from './projects.module.css'
+import { useIntl } from 'react-intl'
+
+
 import { PROJECTS } from 'constants/projects'
+
 import { Card } from './components'
+import styles from './projects.module.css'
 
 gsap.registerPlugin(ScrollTrigger)
 

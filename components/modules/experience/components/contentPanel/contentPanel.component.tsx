@@ -1,7 +1,10 @@
 import { CSSProperties } from 'react'
-import { useIntl } from 'react-intl'
+
 import { useTheme } from '@mui/material'
+import { useIntl } from 'react-intl'
+
 import { Message } from 'components/modules/projects/projects.model'
+
 import styles from './contentPanel.module.css'
 
 type Props = {
@@ -21,7 +24,7 @@ export const ContentPanel = ({ title, actions, company, url }: Props) => {
   return (
     <div className={styles.container} style={customStyles}>
       <p className={styles.title}>
-        <a href={url} target="_blank">
+        <a href={url} target="_blank" rel="noreferrer">
           {company}
         </a>
         {intl.formatMessage(title)}

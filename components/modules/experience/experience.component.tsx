@@ -1,5 +1,7 @@
 import { useIntl } from 'react-intl'
+
 import { EXPERIENCE } from 'constants/content'
+
 import { ExperienceTabs } from './components/tabs'
 import styles from './experience.module.css'
 

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+
 import styles from './spinner.module.css'
 
 export const Spinner = () => (
